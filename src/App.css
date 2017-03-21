@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.PhotoRoller {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.thumb {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+    border: 3px solid #000;
+    background-position: center center;
+    background-size: cover;
+}
+
+.circular--portrait {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+}
+
+.show-listing {
+  padding-bottom: 10px;
+  padding-left: 4px;
+  margin-bottom: 10px;
+}
+
+a.show-listing, a.show-listing:visited {
+  color: black;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+

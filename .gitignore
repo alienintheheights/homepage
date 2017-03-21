@@ -1,0 +1,6 @@
+.bundle
+pkg/*
+build/*
+public/images/*
+node_modules/*
+util/*
