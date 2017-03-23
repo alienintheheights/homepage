@@ -6,6 +6,7 @@ const imageMgr = (state = {
   imageArray: [],
   currentImages: [],
   currentIndex: 0,
+  shows: [],
   modalImageId: null,
   isModalHidden: true
   
@@ -31,6 +32,9 @@ const imageMgr = (state = {
       }
 
       return {...state, imageArray: imgArray, currentImages:  curArray, currentIndex: NUMBER_OF_IMAGES_TO_DISPLAY}
+
+   case 'SHOW_FETCH_SUCCEEDED':
+      return {...state, shows: action.shows}
 
     case 'DISPLAY_MODAL':
       return {...state, isModalHidden: false, modalImageId: action.imageId }

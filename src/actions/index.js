@@ -24,3 +24,9 @@ export const closeModal = () => {
   }
 }
 
+export const fetchShows = () => {
+  return {
+    type: 'SHOW_FETCH_REQUESTED'
+  }
+}
+

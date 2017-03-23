@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
 import './App.css';
 import Header from './Header'
@@ -13,15 +14,27 @@ class App extends Component {
     return (
       <div>
         <Header />
-         <Shows />
-         <PhotoRoller />
+        <Shows dispatch={this.props.dispatch} />
+        <PhotoRoller />
         <About />
-         <Footer />
+        <Footer />
         <Modal />
       </div>
     );
   }
 }
 
-export default App
+App.propTypes = {
+  data: React.PropTypes.object,
+  children: React.PropTypes.object,
+  dispatch: React.PropTypes.func
+}
+
+function select(state) {
+  return {
+    data: state
+  }
+}
+
+export default connect(select)(App)
 

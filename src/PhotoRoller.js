@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import {connect} from 'react-redux'
-import DynamicImage from './DynamicImage';
+import DynamicImage from './DynamicImage'
 import { getNextIndex, shuffleImages, displayModal } from './actions'
+import { IMAGE_CYCLE_INTERVAL_MILLISECONDS } from './constants'
 
 class PhotoRoller extends Component {
   constructor(props) {
@@ -14,8 +15,9 @@ class PhotoRoller extends Component {
 
   componentDidMount() {
     this.props.shuffleImages({});
-    this.setState({ refreshIntervalId: setInterval(this.rollImages, 2000) });
+    this.setState({ refreshIntervalId: setInterval(this.rollImages, IMAGE_CYCLE_INTERVAL_MILLISECONDS) });
     //window.addEventListener('scroll', this.handleScroll);
+    // TODO: track visible scroll and disable photoroller cycling
   }
 
   componentDidUnMount() {
@@ -51,7 +53,6 @@ class PhotoRoller extends Component {
             {currentImages.map(function (value, index) {
               return (<DynamicImage imageValue={value} key={index} {...me.props} />);
             })}
-           
           </div>
         </div>
       </section>
