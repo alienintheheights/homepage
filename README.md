@@ -9,6 +9,6 @@ https://github.com/facebookincubator/create-react-app
 
 # About the Photos
 
-The PhotoRoller I created looks for photos in public/images/thumb named numerically, 1.jpg, 2.jpg... up to ${constants.NUMBER_OF_IMAGES}.jpg, so set accordingly. It will randomly sort them, then periodically cycle the displayed photos with new ones.
+The PhotoRoller I created looks for photos in an AWS S3 bucket named numerically, resized-1.jpg, resized-2.jpg... up to ${constants.NUMBER_OF_IMAGES}.jpg, so set accordingly. It will randomly sort them, then periodically cycle the displayed photos with new ones.
 
 

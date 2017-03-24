@@ -1,4 +1,4 @@
-import {IMAGE_THUMBNAIL_PATH, IMAGE_FULL_PATH} from './constants' 
+import {IMAGE_FULL_PATH, AWS_HOST_THUMBNAIL_BUCKET, AWS_THUMBNAIL_IMG_PREFIX} from './constants' 
 
 const shuffle = function (array) {
   // Fisher-Yates shuffle
@@ -24,7 +24,7 @@ export const buildImageArray = function (size) {
 }
 
 export const genImageThumbnailPath = function (imgValue) {
-  return IMAGE_THUMBNAIL_PATH + imgValue + ".jpg";
+  return AWS_HOST_THUMBNAIL_BUCKET + AWS_THUMBNAIL_IMG_PREFIX + imgValue + ".jpg";
 }
 
 export const genImageFullPath = function (imgValue) {

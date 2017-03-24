@@ -44,7 +44,7 @@ class PhotoRoller extends Component {
           <div className="row">
             <div className="col-lg-12 text-center">
               <h2>Photos</h2>
-              <small>I take photos on my iPhone and my Canon 5D. <a href="https://www.flickr.com/photos/lienhard/">More on Flickr</a></small>
+              <small>I take photos on an iPhone and a Canon 5D. <a href="https://www.flickr.com/photos/lienhard/">More on Flickr</a></small>
               <hr className="star-primary" />
                
             </div>

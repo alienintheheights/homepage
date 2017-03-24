@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import './App.css';
 import { displayModal } from './actions'
-import { genStyleTag } from './util'
+import { genImageThumbnailPath } from './util'
 
 class DynamicImage extends Component {
 
@@ -13,12 +13,11 @@ class DynamicImage extends Component {
 
   render() {
     const { imageValue } = this.props
-    const style = genStyleTag(imageValue)
-
+    const srcPath = genImageThumbnailPath(imageValue)
     return (
       <div className="PhotoRoller">
           <div className="col-sm-4 portfolio-item">
-             <img style={style} alt={imageValue} className="thumb img-responsive" />
+             <img src={srcPath} alt={imageValue} className="img-responsive" />
           </div>
      </div>
     );
