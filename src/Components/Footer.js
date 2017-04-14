@@ -39,7 +39,7 @@ class Footer extends Component {
                             <div className="footer-col col-md-4">
                                 <h3>Tech Bits</h3>
                                 <p>This site is written in ReactJS, Redux and Saga. 
-                                    The source code is <a className="successLink" href="https://github.com/alienintheheights/homepage">here</a>. 
+                                    The source code is <a className="successLink" onClick={this.handleClick.bind(this, 'https://github.com/alienintheheights/homepage')}  href="https://github.com/alienintheheights/homepage">here</a>. 
                                     The UI is based on the <a className="successLink" href="http://startbootstrap.com">Freelance</a> Bootstrap theme. 
                                 </p>
                             </div>
