@@ -4,7 +4,7 @@ import { shuffle } from '../../util'
 class WordItem extends Component {
     constructor(props) {
         super(props)
-        this.toggleShow = this.toggleShow.bind(this)
+        this.showHint = this.showHint.bind(this)
         this.revealWord = this.revealWord.bind(this)
         this.state = {
             currentLetterCount: 0,
@@ -21,7 +21,7 @@ class WordItem extends Component {
         })
     }
 
-    toggleShow(e) {
+    showHint(e) {
         if (e) e.preventDefault()
         const { word } = this.props
         const { revealOrder, currentLetterCount } = this.state
@@ -81,7 +81,7 @@ class WordItem extends Component {
                 </div>
                 <div className="word-answer">
                     <span className="word-reveal">{clue}</span>
-                    <button className={hintBtnClass} onClick={this.toggleShow}>hint</button>
+                    <button className={hintBtnClass} onClick={this.showHint}>hint</button>
                     <button className={hintBtnClass} onClick={this.revealWord}>reveal</button>
 
                 </div>

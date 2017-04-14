@@ -6,7 +6,10 @@ class FeatureImage extends Component {
     const { image } = this.props
     return (
       <div className="gallery-image">
-            {(image) ? <img src={image[1]} alt={image[0]} /> : ""}
+        {(image) ? (
+          <div><img src={image[1]} alt={image[0]} />
+            <div className="image-title">{image[0]}</div></div>
+        ) : ""}
       </div>
     )
   }

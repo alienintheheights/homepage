@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import ImageGallery from './ImageGallery'
 import FeatureImage from './FeatureImage'
 import { loadImages, selectImage } from '../../actions'
+import { IMAGES_PER_PAGE } from '../../constants'
 
 class Gallery extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Gallery extends Component {
   componentDidMount() {
     this.props.loadImages({
       page: this.state.pageNumber,
-      size: 6
+      size: IMAGES_PER_PAGE
     })
   }
 
@@ -27,7 +28,7 @@ class Gallery extends Component {
     const { pageNumber } = this.state
     this.props.loadImages({
       page: pageNumber + 1,
-      size: 6
+      size: IMAGES_PER_PAGE
     })
     this.setState({
       pageNumber: pageNumber + 1
@@ -40,7 +41,7 @@ class Gallery extends Component {
 
     this.props.loadImages({
       page: pageNumber - 1,
-      size: 6
+      size: IMAGES_PER_PAGE
     })
     this.setState({
       pageNumber: pageNumber - 1
