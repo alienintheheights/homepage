@@ -104,21 +104,30 @@ a:hover.successLink {
 }
 
 .image-scroller {
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    width: 395px;
+    margin: auto;
 }
 
 .image-scroller img {
-    height: 40px;
+    height: 45px;
+    width: 45px;
     padding: 1px;
     border: 1px solid black;
 }
 
 @media (min-width: 767px) {
   .image-scroller img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
+
+  .image-scroller {
+    width: 550px;
+  }
+}
+
+.gcolor {
+    color: #fee;
 }
 

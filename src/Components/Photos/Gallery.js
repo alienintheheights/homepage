@@ -25,6 +25,7 @@ class Gallery extends Component {
   }
 
   nextBatch(e) {
+    if (e) e.preventDefault()
     const { pageNumber } = this.state
     this.props.loadImages({
       page: pageNumber + 1,
@@ -36,6 +37,7 @@ class Gallery extends Component {
   }
 
   prevBatch(e) {
+    if (e) e.preventDefault()
     const { pageNumber } = this.state
     if (pageNumber === 1) return
 
@@ -64,8 +66,8 @@ class Gallery extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-4 col-sm-offset-4 text-center">
-              <ImageGallery imageArray={images} selectImage={selectImage} pageNumber={pageNumber} nextButton={this.nextBatch} prevButton={this.prevBatch}/>
+            <div className="col-lg-12 text-center">
+              <ImageGallery imageArray={images} selectImage={selectImage} pageNumber={pageNumber} nextButton={this.nextBatch} prevButton={this.prevBatch} />
               <FeatureImage image={selectedImage} />
             </div>
           </div>

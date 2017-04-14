@@ -41,7 +41,7 @@ class Shows extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-sm-6 col-sm-offset-3 ">
+                        <div className="col-sm-6 col-sm-offset-3">
                             <div className="show-toggle">
                                 <a href="" onClick={this.getFutureShows}>Upcoming Shows</a> | <a href="" onClick={this.getPastShows}>Past Shows</a>
                             </div>
