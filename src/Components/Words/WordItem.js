@@ -53,8 +53,8 @@ class WordItem extends Component {
         const { word } = this.props
         const { revealOrder, currentLetterCount, reveal } = this.state
 
-        if (reveal) return word.entry
         if (!word) return ""
+        if (reveal) return word.entry
 
         let cluearry = []
         let wordArray = word.entry.split("")
