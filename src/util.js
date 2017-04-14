@@ -1,7 +1,10 @@
-import {IMAGE_FULL_PATH, AWS_HOST_THUMBNAIL_BUCKET, AWS_THUMBNAIL_IMG_PREFIX} from './constants' 
+const DEFAULT_PAGE_SIZE = 6
 
-const shuffle = function (array) {
-  // Fisher-Yates shuffle
+/**
+ * Fisher-Yates shuffle for array randomizing.
+ * @param {*} array 
+ */
+export const shuffle = function (array) {
   var i = 0,
     j = 0,
     temp = null
@@ -14,26 +17,25 @@ const shuffle = function (array) {
   }
 }
 
-export const buildImageArray = function (size) {
-  var imageArray = [];
-  for (var i = 0; i < size; i++) {
-    imageArray[i] = (i + 1)
-  }
-  shuffle(imageArray)
-  return imageArray
+/**
+ * For Google analytics.
+ * @param {*} linkText 
+ */
+export const trackClick = function(linkText) {
+    window.trackOutboundLink(linkText);
 }
 
-export const genImageThumbnailPath = function (imgValue) {
-  return AWS_HOST_THUMBNAIL_BUCKET + AWS_THUMBNAIL_IMG_PREFIX + imgValue + ".jpg";
-}
-
-export const genImageFullPath = function (imgValue) {
-  return IMAGE_FULL_PATH + imgValue + ".jpg";
-}
-
-export const genStyleTag = function (imgValue) {
-  return {
-    backgroundImage: 'url(' + genImageThumbnailPath(imgValue) + ')'
-  }
+/**
+ * Adds pagination to flickr URL
+ * 
+ * @param url the URL
+ * @param pageNumber the page 
+ * @param pageSize the number per page
+ */
+export const appendPaginationToURL = function (url, pageNumber = 1, pageSize = DEFAULT_PAGE_SIZE) {
+    url += "&page=#START_INDEX#&per_page=#PAGE_SIZE#"
+    url = url.replace("#START_INDEX#", pageNumber)
+    url = url.replace("#PAGE_SIZE#", pageSize || 10)
+    return url
 }
 

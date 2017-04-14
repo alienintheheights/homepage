@@ -11,16 +11,18 @@ export const shuffleImages = () => {
   }
 }
 
-export const displayModal = (imageId) => {
+export const loadImages = (payload) => {
   return {
-    type: 'DISPLAY_MODAL',
-    imageId: imageId
+    type: 'IMAGES_FETCH_REQUESTED',
+    page: payload.page,
+    size: payload.size
   }
 }
 
-export const closeModal = () => {
+export function selectImage(image) {
   return {
-    type: 'CLOSE_MODAL'
+    type: 'SELECT_IMAGE',
+    image
   }
 }
 
@@ -29,4 +31,35 @@ export const fetchShows = () => {
     type: 'SHOW_FETCH_REQUESTED'
   }
 }
+
+export const fetchPastShows = () => {
+  return {
+    type: 'PASTSHOW_FETCH_REQUESTED'
+  }
+}
+
+export const getNextWord = () => {
+  return { 
+    type: 'NEXT_WORD'
+  }
+}
+
+export const getLastWord = () => {
+  return { 
+    type: 'LAST_WORD'
+  }
+}
+
+export const fetchWords = () => {
+  return {
+    type: 'WORDS_FETCH_REQUESTED'
+  }
+}
+
+export const fetchWord = () => {
+  return {
+    type: 'WORD_FETCH_REQUESTED'
+  }
+}
+
 

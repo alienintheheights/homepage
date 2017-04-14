@@ -8,3 +8,4 @@ export const IMAGE_THUMBNAIL_PATH = "/images/thumb/"
 export const IMAGE_FULL_PATH = "/images/medium/"
 export const AWS_HOST_THUMBNAIL_BUCKET = "https://s3-us-west-2.amazonaws.com/andrewlienhardresized/"
 export const AWS_THUMBNAIL_IMG_PREFIX = "resized-"
+export const timeZone = 'America/Chicago'

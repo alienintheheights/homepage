@@ -1,50 +1,48 @@
 
-import { NUMBER_OF_IMAGES, NUMBER_OF_IMAGES_TO_DISPLAY } from '../constants'
-import { buildImageArray } from '../util'
-
-const imageMgr = (state = {
-  imageArray: [],
-  currentImages: [],
-  currentIndex: 0,
-  shows: [],
-  modalImageId: null,
-  isModalHidden: true
-  
+/**
+ * The Application state.
+ * @param {*} state 
+ * @param {*} action 
+ */
+const appState = (state = {
+  words: [],
+  wordIndex: 0,
+  wod: {},
+  images: [],
+  shows: []
 }, action) => {
-
+  
   switch (action.type) {
 
-    case 'NEXT_IMAGE':
-      var updateCurrentImages = state.currentImages.slice(0)
-      var newIndex = (state.currentIndex === state.imageArray.length) ? 0 : state.currentIndex
+    case 'IMAGES_RECEIVED':
+      return {...state, images: action.images};
 
-      var selectedIdx = Math.floor(Math.random() * NUMBER_OF_IMAGES_TO_DISPLAY)
-      updateCurrentImages[selectedIdx] = state.imageArray[newIndex]
-      
-      return {...state, currentImages: updateCurrentImages, currentIndex: newIndex + 1 }
+    case 'SELECT_IMAGE':
+      return {...state, selectedImage: action.image};
 
-    case 'SHUFFLE_IMAGES': //TODO this does two things. Maybe split it up?
-      var imgArray = buildImageArray(NUMBER_OF_IMAGES)
-      // build and load display array
-      var curArray = []
-      for (var i = 0; i < NUMBER_OF_IMAGES_TO_DISPLAY; i++) {
-        curArray[i] = imgArray[i]
-      }
+    case 'LOAD_IMAGES_FAILURE':
+      return state;
 
-      return {...state, imageArray: imgArray, currentImages:  curArray, currentIndex: NUMBER_OF_IMAGES_TO_DISPLAY + 1}
+    case 'SHOW_FETCH_SUCCEEDED':
+      return { ...state, shows: action.shows }
 
-   case 'SHOW_FETCH_SUCCEEDED':
-      return {...state, shows: action.shows}
+    case 'PASTSHOW_FETCH_SUCCEEDED':
+      return { ...state, shows: action.shows }
 
-    case 'DISPLAY_MODAL':
-      return {...state, isModalHidden: false, modalImageId: action.imageId }
-    
-    case 'CLOSE_MODAL':
-      return {...state, isModalHidden: true }
+    case 'NEXT_WORD':
+      const nextIndex = (state.wordIndex < state.words.length - 1) ? state.wordIndex + 1 : 0
+      return { ...state, wod: state.words[nextIndex], wordIndex: nextIndex }
+
+    case 'LAST_WORD':
+      const lastIndex = (state.wordIndex > 0 ) ? (state.wordIndex - 1) : (state.words.length - 1)
+      return { ...state, wod: state.words[lastIndex], wordIndex: lastIndex }
+
+    case 'WORDS_FETCH_SUCCEEDED':
+      return { ...state, words: action.words,  wod: action.words[0] }
 
     default:
       return state
   }
 }
 
-export default imageMgr
+export default appState

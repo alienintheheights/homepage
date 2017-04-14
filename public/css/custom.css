@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.PhotoRoller {
+  text-align: left;
+}
+
+.thumb {
+    display: inline-block;
+    width: 300px;
+    margin: 5px;
+    border: 3px solid #000;
+    background-position: center center;
+    background-size: cover;
+}
+
+.circular--portrait {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+}
+
+.show-listing {
+  padding-bottom: 10px;
+  padding-left: 4px;
+}
+
+.show-listing h4 {
+  margin-bottom: -10px;
+}
+
+a.show-listing, a.show-listing:visited {
+  color: black;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+a.successLink, a:visited.successLink {
+  color:#f33;
+}
+
+a:hover.successLink {
+  color:#ff3;
+  text-decoration: none;
+}
+
+.show-toggle {
+  padding: 5px 0;
+  font-size: 13px;
+  border: 1px black solid;
+  background-color: #eee;
+  text-align: center;
+}
+
+.game-panel {
+  
+}
+
+.word-def {
+  min-height: 60px;
+}
+.word-listing h5 {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.word-reveal {
+  color: red;
+  letter-spacing: 1.0ex;
+  min-width: 155px;
+  display: inline-block;
+  text-align: right;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 700;
+  justify-content: space-around;
+}
+
+.gallery-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-image img {
+    width: auto;
+    max-height: 400px;
+    border: 1px solid black;
+}
+
+.image-scroller {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px
+}
+
+.image-scroller img {
+    width: 50px;
+    height: 50px;
+    padding: 1px;
+    border: 1px solid black;
+}
+

@@ -1,14 +1,48 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
-import { requestShows } from '../api'
+import { requestCurrentShows, requestPastShows } from '../api/gigs'
+import { requestWords } from '../api/words'
+import { fetchImages } from '../api/flickr'
+
 
 // worker Saga: will be fired on SHOW_FETCH_REQUESTED actions
 function* fetchShows(action) {
     try {
-        const showdb = yield call(requestShows)
+        action.listFutures = true
+        const showdb = yield call(requestCurrentShows, action)
         yield put({ type: "SHOW_FETCH_SUCCEEDED", shows: showdb });
     } catch (e) {
         yield put({ type: "SHOW_FETCH_FAILED", message: e.message });
     }
+}
+
+function* fetchPastShows(action) {
+    try {
+        action.listFutures = false
+        const showdb = yield call(requestPastShows, action)
+        yield put({ type: "PASTSHOW_FETCH_SUCCEEDED", shows: showdb });
+    } catch (e) {
+        yield put({ type: "SHOW_FETCH_FAILED", message: e.message });
+    }
+}
+
+// worker Saga: will be fired on WORDS_FETCH_REQUESTED actions
+function* fetchWords(action) {
+    try {
+        const worddb = yield call(requestWords, action)
+        yield put({ type: "WORDS_FETCH_SUCCEEDED", words: worddb });
+    } catch (e) {
+        yield put({ type: "WORDS_FETCH_FAILED", message: e.message });
+    }
+}
+
+export function* loadImages(action) {
+  try {
+    const images = yield call(fetchImages, action);
+    yield put({type: 'IMAGES_RECEIVED', images});
+    yield put({type: 'SELECT_IMAGE', image: images[0]})
+  } catch (error) {
+    yield put({type: 'LOAD_IMAGES_FAILURE', error})
+  }
 }
 
 /*
@@ -17,6 +51,9 @@ function* fetchShows(action) {
 */
 function* mySaga() {
     yield takeEvery("SHOW_FETCH_REQUESTED", fetchShows);
+    yield takeEvery("PASTSHOW_FETCH_REQUESTED", fetchPastShows);
+    yield takeEvery("WORDS_FETCH_REQUESTED", fetchWords);
+    yield takeEvery("IMAGES_FETCH_REQUESTED", loadImages);
 }
 
 /*

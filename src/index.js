@@ -3,17 +3,16 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-import App from './App'
-import './index.css'
+import App from './Components/App'
 
-import imageMgr from './reducers'
+import appState from './reducers'
 import mySaga from './sagas'
 
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware()
 // mount it on the Store
 const store = createStore(
-  imageMgr,
+  appState,
   applyMiddleware(sagaMiddleware)
 )
 
