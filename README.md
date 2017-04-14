@@ -7,8 +7,12 @@ will kick off react-scripts and will try to grab port 3000. Make sure that's ava
 
 https://github.com/facebookincubator/create-react-app
 
+# About the XWord
+
+I've been keeping a list of words that stumped me while working the NYT crossword puzzle. I decided to put it to use.
+
 # About the Photos
 
-The PhotoRoller I created looks for photos in an AWS S3 bucket named numerically, resized-1.jpg, resized-2.jpg... up to ${constants.NUMBER_OF_IMAGES}.jpg, so set accordingly. It will randomly sort them, then periodically cycle the displayed photos with new ones.
+I'm using the Flickr API to fetch my photostream. The Gallery is based on one from Joel at egghead, but with my own features added.
 
 
