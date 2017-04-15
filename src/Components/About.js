@@ -18,7 +18,8 @@ class About extends Component {
                     </div>
                     <div className="row">
                         <div className="col-lg-4 col-lg-offset-2">
-                            <p>Hi, I'm a software developer. I write Java backends, JS front-ends. 
+                            <p>
+                             Hi, I'm a software developer. I write Java backends, JS front-ends. 
                              Lately, I've been doing a lot of ReactJS. I'm also a musician. I play
                              the piano, jazz primarily but not exclusively. Check out the <a href="#shows">Shows</a> section above to find out where.</p>
                         </div>

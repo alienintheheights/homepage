@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class Footer extends Component {
-
     handleClick(linkText) {
         window.trackOutboundLink(linkText);
     }
@@ -14,7 +13,7 @@ class Footer extends Component {
                         <div className="row">
                             <div className="footer-col col-md-4">
                                 <h3>Location</h3>
-                                <br />Houston/Austin and thereabouts
+                                <br />Houston/Austin and thereabouts, Tejas
                             </div>
                             <div className="footer-col col-md-4">
                                 <h3>Around the Web</h3>

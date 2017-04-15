@@ -61,7 +61,6 @@ class Gallery extends Component {
           <div className="row">
             <div className="col-lg-12 text-center">
               <h2>Flickr Photos</h2>
-              <small>I wrote this photo gallery using the Flickr REST API. Visit our <a className="successLink" href="https://www.flickr.com/photos/lienhard/">Flickr page</a></small>
               <hr className="star-primary" />
             </div>
           </div>

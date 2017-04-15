@@ -10,6 +10,7 @@ import WordGame from './Words/WordGame'
 import Gallery from './Photos/Gallery'
 
 class App extends Component {
+  
   render() {
     return (
       <div>

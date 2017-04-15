@@ -7,3 +7,5 @@ node_modules/*
 util/*
 build.zip
 deploy.sh
+dist/*
+temp/*
