@@ -5,12 +5,6 @@ export const getNextIndex = () => {
   }
 }
 
-export const shuffleImages = () => {
-  return {
-    type: 'SHUFFLE_IMAGES'
-  }
-}
-
 export const loadImages = (payload) => {
   return {
     type: 'IMAGES_FETCH_REQUESTED',
