@@ -22,9 +22,6 @@ function makeWebpackConfig(options) {
                 path.resolve(__dirname, '../src/index.js')
             ],
             vendor: [
-                'jquery',
-                'jquery.easing',
-                'bootstrap',
                 'react',
                 'moment',
                 'moment-timezone'
@@ -68,6 +65,7 @@ function makeWebpackConfig(options) {
                 // Copy directory contents to {output}/to/directory/
                 { from: 'public/data', to: 'data' },
                 { from: 'public/img', to: 'img' },
+                { from: 'public/js', to: 'js' },
                 { from: 'public/favicon.ico', to: 'favicon.ico' },
                 { from: 'public/flickr.php', to: 'flickr.php' }
             ]),
@@ -110,12 +108,7 @@ function makeWebpackConfig(options) {
                 },
                 sourceMap: true
             }),
-            new webpack.ProvidePlugin({
-                jQuery: 'jquery',
-                $: 'jquery',
-                jquery: 'jquery'
-            }),
-            // compile time plugins
+           // compile time plugins
             new webpack.DefinePlugin({
                 'process.env.NODE_ENV': options.env,
             }),

@@ -1,7 +1,7 @@
 import { appendPaginationToURL } from '../util'
 const nodeEnv = process.env.NODE_ENV;
 // URL for the REST call 
-const API_ENDPOINT = (nodeEnv === "production") ? `/flickr.php` : `http://localhost/flickr.php?`;
+const API_ENDPOINT = (nodeEnv === "production") ? `/flickr.php?` : `http://localhost/flickr.php?`;
 
 export const fetchImages = (payload) => {
   const url = appendPaginationToURL(API_ENDPOINT, payload.page, payload.size)

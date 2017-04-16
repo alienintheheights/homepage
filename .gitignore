@@ -6,6 +6,7 @@ public/flickr.php
 node_modules/*
 util/*
 build.zip
+dist.zip
 deploy.sh
 dist/*
 temp/*
