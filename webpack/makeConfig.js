@@ -1,6 +1,5 @@
 'use strict'
 
-
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const webpack = require('webpack'); //to access built-in plugins
@@ -109,7 +108,7 @@ function makeWebpackConfig(options) {
             }),
            // compile time plugins
             new webpack.DefinePlugin({
-                'process.env.NODE_ENV': options.env,
+                'process.env.NODE_ENV': options.env
             }),
             // webpack-dev-server enhancement plugins
             new DashboardPlugin(),

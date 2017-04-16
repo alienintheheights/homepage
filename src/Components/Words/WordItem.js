@@ -13,6 +13,16 @@ class WordItem extends Component {
         }
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        if (this.props.word !== nextProps.word) {
+            return true;
+        }
+        if ((nextState.currentLetterCount > 0 && this.state.currentLetterCount !== nextState.currentLetterCount) || nextState.reveal) {
+            return true;
+        }
+        return false;
+    }
+
     componentWillReceiveProps() {
         this.setState({
             currentLetterCount: 0,

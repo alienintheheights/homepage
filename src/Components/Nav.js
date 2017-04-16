@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
-// TODO find out why "easing" isn't working here
 class Nav extends Component {
-
     constructor(props) {
         super(props)
     }
@@ -15,11 +13,15 @@ class Nav extends Component {
     }
 
     handleScrollAnimation() {
+        // Co-opted from the Freelance theme.
+
         // jQuery for page scrolling feature - requires jQuery Easing plugin
         $('.page-scroll a').bind('click', function (event) {
             var $anchor = $(this);
+            var offset = $($anchor.attr('href')).offset();
+            if (!offset) return;
             $('html, body').stop().animate({
-                scrollTop: ($($anchor.attr('href')).offset().top - 50)
+                scrollTop: (offset) ? (offset.top - 50) : 0
             }, 1250, 'easeInOutExpo');
             event.preventDefault();
         });

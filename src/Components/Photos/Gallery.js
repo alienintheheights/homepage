@@ -17,6 +17,14 @@ class Gallery extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.data.selectedImage !== nextProps.data.selectedImage) {
+      return true;
+    }
+
+    return false;
+  }
+
   componentDidMount() {
     this.props.loadImages({
       page: this.state.pageNumber,

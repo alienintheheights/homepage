@@ -13,6 +13,14 @@ class Shows extends Component {
         this.getFutureShows = this.handleFutureClick.bind(this)
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        if (this.props.data.shows !== nextProps.data.shows) {
+            return true;
+        }
+
+        return false;
+    }
+
     // TODO make this load via REST API
     componentDidMount() {
         this.handleFutureClick()
