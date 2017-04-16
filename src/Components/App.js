@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Nav />
+        <Nav/>
         <Header />
         <Shows dispatch={this.props.dispatch} />
         <Gallery />
