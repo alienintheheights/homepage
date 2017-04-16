@@ -27,17 +27,17 @@ class About extends Component {
                              Check out the <a className="successLink" href="#shows">shows</a> section above to find out where.</p>
                         </div>
                         <div className="col-lg-4">
-                            <p>Since I'm not on Facebook, the easiest way to reach me is by email: andrew.lienhard @ gmail.com 
+                            <p>
+                                Since I'm not on Facebook, the easiest way to reach me is by email: andrew.lienhard @ gmail.com 
                                 or just find me on <a onClick={this.handleClick.bind(this, 'https://www.linkedin.com/in/andrewlienhard/')} className="successLink" 
                                 href="https://www.linkedin.com/in/andrewlienhard/" >LinkedIn</a> or
                                 on <a onClick={this.handleClick.bind(this, 'https://twitter.com/aendroulius')} className="successLink" 
                                 href="https://twitter.com/aendroulius">Twitter</a>. Meanwhile, 
                                 check out my wife's <a className="successLink" onClick={this.handleClick.bind(this, 'http://www.sparrowandthenest.com/')} 
-                                href="http://www.sparrowandthenest.com/">site</a>. She makes
+                                href="http://www.sparrowandthenest.com/">site</a>: she makes
                                 the most amazing <a className="successLink" 
                                 onClick={this.handleClick.bind(this, 'http://www.sparrowandthenest.com/#/photos/')} 
-                                href="http://www.sparrowandthenest.com/#/photos/">soap</a>. End of bio. Have a nice day.
-                                
+                                href="http://www.sparrowandthenest.com/#/photos/">soap!</a> End of bio. Have a nice day.
                                </p>
                         </div>
                     </div>
