@@ -43,10 +43,11 @@
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "start": "webpack-dashboard -t 'dash' -- webpack-dev-server --colors --inline  --config webpack/dev.js  -- --watch",
+    "start": "webpack-dashboard -t 'dash' -- webpack-dev-server --colors --inline  --config webpack/dev.js  ",
     "build": "webpack -p --config webpack/prod.js --progress --colors -d --display-error-details"
   },
   "jest": {
+    "testRegex": "\\-test\\.js$",
     "transform": {
       ".*": "./node_modules/babel-jest"
     },
@@ -62,10 +63,10 @@
       "node_modules/(?!react-native|my-project|react-native-button)/"
     ],
     "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react",
-      "<rootDir>/node_modules/react-dom",
-      "<rootDir>/node_modules/react-addons-test-utils",
-      "<rootDir>/EmptyModule.js"
+      "./node_modules/react",
+      "./node_modules/react-dom",
+      "./node_modules/react-addons-test-utils",
+      "./EmptyModule.js"
     ]
   }
 }
