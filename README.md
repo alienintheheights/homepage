@@ -1,5 +1,5 @@
 # Source for my ReactJS/Redux homepage
-This is the source for my personal home page [andrewlienhard.com](http://andrewlienhard.com), so it's more of a way to keep my code safe than function as a useful open source project. It runs on [reactJS](https://facebook.github.io/react/), [redux](http://redux.js.org/) and [saga](https://redux-saga.github.io/redux-saga/docs/introduction/BeginnerTutorial.html) and uses the free bootstrap theme, [Freelance](https://startbootstrap.com/). The dev tooling is courtesy of [Webpack](https://webpack.github.io/).
+This is the source for my personal home page [andrewlienhard.com](http://andrewlienhard.com), so it's more to keep my code safe than function as a useful open source project. It runs on [reactJS](https://facebook.github.io/react/), [redux](http://redux.js.org/) and [saga](https://redux-saga.github.io/redux-saga/docs/introduction/BeginnerTutorial.html) and uses the free bootstrap theme, [Freelance](https://startbootstrap.com/). The dev tooling is courtesy of [Webpack](https://webpack.github.io/).
 
 # Yarn Bits
 Clone the git repository and make sure you have [yarn](https://yarnpkg.com/en/) installed. From there you can do things like...
