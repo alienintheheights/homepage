@@ -16,9 +16,9 @@ class App extends Component {
       <div>
         <Header />
         <Shows dispatch={this.props.dispatch} />
-        <About />
-        <WordGame dispatch={this.props.dispatch} />
         <Gallery />
+        <WordGame dispatch={this.props.dispatch} />
+        <About />
         <Footer />
       </div>
     )

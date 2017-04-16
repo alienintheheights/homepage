@@ -1,9 +1,4 @@
 
-export const getNextIndex = () => {
-  return {
-    type: 'NEXT_IMAGE'
-  }
-}
 
 export const loadImages = (payload) => {
   return {
@@ -50,10 +45,5 @@ export const fetchWords = () => {
   }
 }
 
-export const fetchWord = () => {
-  return {
-    type: 'WORD_FETCH_REQUESTED'
-  }
-}
 
 

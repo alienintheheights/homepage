@@ -43,7 +43,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "start": "webpack-dashboard -t 'dash' -- webpack-dev-server --colors --inline  --config webpack/dev.js",
+    "start": "webpack-dashboard -t 'dash' -- webpack-dev-server --colors --inline  --config webpack/dev.js  -- --watch",
     "build": "webpack -p --config webpack/prod.js --progress --colors -d --display-error-details"
   },
   "jest": {

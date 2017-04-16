@@ -21,7 +21,7 @@ class About extends Component {
                             <p>
                              Hi, I'm a software developer. I write Java backends, JS front-ends. 
                              Lately, I've been doing a lot of ReactJS. I'm also a musician. I play
-                             the piano, jazz primarily but not exclusively. Check out the <a href="#shows">Shows</a> section above to find out where.</p>
+                             the piano, jazz primarily but not exclusively. Check out the <a className="successLink" href="#shows">shows</a> section above to find out where.</p>
                         </div>
                         <div className="col-lg-4">
                             <p>This site serves as a glorified business card. Use it to get my digits or send me a message.

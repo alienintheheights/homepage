@@ -10,7 +10,7 @@ class Header extends Component {
                         <div className="col-lg-12">
                             <img className="img-responsive circular--portrait" src="img/portfolio/synthlab.jpg" alt=""/>
                             <div className="intro-text">
-                                <h1 className="name">Andrew Lienhard</h1>
+                                <h2 className="name">Andrew Lienhard</h2>
                                 <hr className="star-light" />
                                 <span className="skills">Software Developer - Pianist</span>
                             </div>
