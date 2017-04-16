@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
+import Nav from './Nav'
 import Header from './Header'
 import Footer from './Footer'
 import About from './About'
@@ -14,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Nav />
         <Header />
         <Shows dispatch={this.props.dispatch} />
         <Gallery />

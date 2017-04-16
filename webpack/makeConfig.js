@@ -65,7 +65,6 @@ function makeWebpackConfig(options) {
                 // Copy directory contents to {output}/to/directory/
                 { from: 'public/data', to: 'data' },
                 { from: 'public/img', to: 'img' },
-                { from: 'public/js', to: 'js' },
                 { from: 'public/favicon.ico', to: 'favicon.ico' },
                 { from: 'public/flickr.php', to: 'flickr.php' }
             ]),

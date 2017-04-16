@@ -8,7 +8,7 @@ class Header extends Component {
                 <div className="container" id="maincontent" tabIndex="-1">
                     <div className="row">
                         <div className="col-lg-12">
-                            <img className="img-responsive circular--portrait" src="img/portfolio/synthlab.jpg" alt=""/>
+                            <img className="img-responsive circular--portrait" src="img/synthlab.jpg" alt=""/>
                             <div className="intro-text">
                                 <h2 className="name">Andrew Lienhard</h2>
                                 <hr className="star-light" />
