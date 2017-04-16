@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class Footer extends Component {
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return false;
+    }
+
     handleClick(linkText) {
         window.trackOutboundLink(linkText);
     }

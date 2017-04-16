@@ -14,11 +14,7 @@ class Shows extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (this.props.data.shows !== nextProps.data.shows) {
-            return true;
-        }
-
-        return false;
+        return (this.props.data.shows !== nextProps.data.shows)
     }
 
     // TODO make this load via REST API

@@ -18,11 +18,7 @@ class Gallery extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.data.selectedImage !== nextProps.data.selectedImage) {
-      return true;
-    }
-
-    return false;
+    return (this.props.data.selectedImage !== nextProps.data.selectedImage)
   }
 
   componentDidMount() {
