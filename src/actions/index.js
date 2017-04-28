@@ -46,4 +46,12 @@ export const fetchWords = () => {
 }
 
 
+export const fetchProfile = () => {
+  return {
+    type: 'PROFILE_REQUESTED'
+  }
+}
+
+
+
 

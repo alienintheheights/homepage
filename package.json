@@ -10,7 +10,8 @@
     "react-dom": "^15.5.0",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
-    "redux-saga": "^0.14.3"
+    "redux-saga": "^0.14.3",
+    "wpapi": "^1.0.3"
   },
   "devDependencies": {
     "babel-core": "6.24.1",

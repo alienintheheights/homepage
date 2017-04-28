@@ -9,7 +9,8 @@ const appState = (state = {
   wordIndex: 0,
   wod: {},
   images: [],
-  shows: []
+  shows: [],
+  profile: null
 }, action) => {
   
   switch (action.type) {
@@ -22,6 +23,9 @@ const appState = (state = {
 
     case 'LOAD_IMAGES_FAILURE':
       return state;
+
+    case 'PROFILE_REQUESTED_SUCCEEDED':
+      return { ...state, profile: action.profile }
 
     case 'SHOW_FETCH_SUCCEEDED':
       return { ...state, shows: action.shows }

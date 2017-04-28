@@ -20,7 +20,7 @@ class App extends Component {
         <Shows dispatch={this.props.dispatch} />
         <Gallery />
         <WordGame dispatch={this.props.dispatch} />
-        <About />
+        <About dispatch={this.props.dispatch} />
         <Footer />
       </div>
     )

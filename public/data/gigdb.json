@@ -85,5 +85,11 @@
         "venue": "Hotel Granduca",
         "venueUrl": "http://www.granducahouston.com",
         "date": "2017-05-31T17:00:00.000"
+    },
+    {
+        "event": "The Five! featuring tap dance master Kirstin Grbic",
+        "venue": "Ovations",
+        "venueUrl": "http://www.ovationsnightclub.com/",
+        "date": "2017-07-22T19:00:00.000"
     }
 ]

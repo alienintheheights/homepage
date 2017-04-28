@@ -1,8 +1,8 @@
 'use strict'
 
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
-const webpack = require('webpack'); //to access built-in plugins
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const combineLoaders = require('webpack-combine-loaders');
@@ -71,8 +71,8 @@ function makeWebpackConfig(options) {
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, '../public/index.html'),
                 minify: {
-                    removeComments: true,
-                    collapseWhitespace: true,
+                    removeComments: false,
+                    collapseWhitespace: false,
                     removeRedundantAttributes: true,
                     useShortDoctype: true,
                     removeEmptyAttributes: true,

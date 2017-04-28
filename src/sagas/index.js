@@ -2,7 +2,17 @@ import { call, put, takeEvery } from 'redux-saga/effects'
 import { requestCurrentShows, requestPastShows } from '../api/gigs'
 import { requestWords } from '../api/words'
 import { fetchImages } from '../api/flickr'
+import { requestProfile } from '../api/wordpress'
 
+// worker Saga: will be fired on PROFILE_REQUESTED actions
+function* fetchProfile(action) {
+    try {
+        const profiledata = yield call(requestProfile, action)
+        yield put({ type: "PROFILE_REQUESTED_SUCCEEDED", profile: profiledata });
+    } catch (e) {
+        yield put({ type: "PROFILE_REQUESTED_FAILED", message: e.message });
+    }
+}
 
 // worker Saga: will be fired on SHOW_FETCH_REQUESTED actions
 function* fetchShows(action) {
@@ -46,7 +56,7 @@ export function* loadImages(action) {
 }
 
 /*
-  Starts fetchUser on each dispatched `SHOW_FETCH_REQUESTED` action.
+  Starts fetchUser on each dispatched `SHOW_FETCH_REQUESTED` etc action.
   Allows concurrent fetches of user.
 */
 function* mySaga() {
@@ -54,6 +64,7 @@ function* mySaga() {
     yield takeEvery("PASTSHOW_FETCH_REQUESTED", fetchPastShows);
     yield takeEvery("WORDS_FETCH_REQUESTED", fetchWords);
     yield takeEvery("IMAGES_FETCH_REQUESTED", loadImages);
+    yield takeEvery("PROFILE_REQUESTED", fetchProfile);
 }
 
 /*
