@@ -1,5 +1,5 @@
 var WPAPI = require('wpapi');
-var wp = new WPAPI({ endpoint: 'WP_REST_URL/wp-json' });
+var wp = new WPAPI({ endpoint: 'http://www.andrewlienhard.com/zamzam/wp-json' });
 var ABOUT_PAGE_ID = 4;
 
 export const requestProfile = (payload) => {

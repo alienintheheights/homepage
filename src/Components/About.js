@@ -19,7 +19,7 @@ class About extends Component {
     }
 
     render() {
-        const { profile } = this.props.data 
+        const { profile } = this.props.data
         return (
             <section className="success" id="about">
                 <div className="container">
@@ -29,9 +29,7 @@ class About extends Component {
                             <hr className="star-light" />
                         </div>
                     </div>
-                    <div className="row">
-                        <div dangerouslySetInnerHTML={profile} />
-                    </div>
+                    <div className="row" dangerouslySetInnerHTML={profile} />
                 </div>
             </section>
         );
