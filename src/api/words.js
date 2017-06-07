@@ -1,3 +1,4 @@
+import 'whatwg-fetch'
 const fullURL = "/data/vocabdb.json"
 import { shuffle } from "../util"
 

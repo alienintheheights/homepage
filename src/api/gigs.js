@@ -1,6 +1,7 @@
 
 import momentTz from 'moment-timezone'
 import { timeZone } from '../constants'
+import 'whatwg-fetch'
 
 const fullURL = "/data/gigdb.json"
 

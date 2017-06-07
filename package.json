@@ -6,11 +6,12 @@
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.11",
     "prop-types": "^15.5.0",
-    "react": "^15.5.0",
-    "react-dom": "^15.5.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "redux": "^3.6.0",
-    "redux-saga": "^0.14.3",
+    "redux-saga": "^0.15.3",
+    "whatwg-fetch": "^2.0.3",
     "wpapi": "^1.0.3"
   },
   "devDependencies": {
@@ -33,6 +34,7 @@
     "react-hot-loader": "3.0.0-beta.6",
     "react-scripts": "0.9.5",
     "style-loader": "0.16.1",
+    "uglify-js-brunch": "^2.10.0",
     "webpack": "2.4.1",
     "webpack-combine-loaders": "2.0.3",
     "webpack-dashboard": "0.3.0",

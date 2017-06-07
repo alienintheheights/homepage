@@ -1,4 +1,6 @@
 import { appendPaginationToURL } from '../util'
+import 'whatwg-fetch'
+
 const nodeEnv = process.env.NODE_ENV;
 // URL for the REST call 
 const API_ENDPOINT = (nodeEnv === "production") ? `/flickr.php?` : `http://localhost/flickr.php?`;
