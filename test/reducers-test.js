@@ -6,7 +6,8 @@ const initState = {
   wordIndex: 0,
   wod: {},
   images: [],
-  shows: []
+  shows: [],
+  profile: null
 }
 const fauxWords = [{ "entry": "fake1" }, { "entry": "fake2" }]
 
