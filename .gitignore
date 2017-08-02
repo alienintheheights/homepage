@@ -2,6 +2,9 @@
 pkg/*
 build/*
 public/images/*
+public/img/*
+public/music/*
+public/data/*
 public/flickr.php
 node_modules/*
 util/*
@@ -10,3 +13,4 @@ dist.zip
 deploy.sh
 dist/*
 temp/*
+yarn-log.error

@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Nav extends Component {
     constructor(props) {
@@ -16,14 +17,22 @@ class Nav extends Component {
         // Co-opted from the Freelance theme.
 
         // jQuery for page scrolling feature - requires jQuery Easing plugin
+        // handles both hash and page links
         $('.page-scroll a').bind('click', function (event) {
             var $anchor = $(this);
-            var offset = $($anchor.attr('href')).offset();
-            if (!offset) return;
-            $('html, body').stop().animate({
-                scrollTop: (offset) ? (offset.top - 50) : 0
-            }, 1250, 'easeInOutExpo');
-            event.preventDefault();
+            var href = $anchor.attr('href');
+            if (!href) return;
+            var idx = href.indexOf("#");
+            var isHash = (idx == 0);
+            var offset = isHash ? $($(href)).offset() : null;
+            if (offset) {
+                $('html, body').stop().animate({
+                 scrollTop: (offset) ? (offset.top - 50) : 0
+                }, 1250, 'easeInOutExpo');
+                event.preventDefault();
+            } else {
+                window.location="/" + href;
+            }
         });
 
         // Highlight the top nav as scrolling occurs
@@ -44,16 +53,6 @@ class Nav extends Component {
             }
         })
 
-        // Floating label headings for the contact form
-        $(function () {
-            $("body").on("input propertychange", ".floating-label-form-group", function (e) {
-                $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-            }).on("focus", ".floating-label-form-group", function () {
-                $(this).addClass("floating-label-form-group-with-focus");
-            }).on("blur", ".floating-label-form-group", function () {
-                $(this).removeClass("floating-label-form-group-with-focus");
-            });
-        });
     }
 
     render() {
@@ -64,7 +63,7 @@ class Nav extends Component {
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span className="sr-only">Toggle navigation</span> Menu <i className="fa fa-bars"></i>
                         </button>
-                        <a className="navbar-brand" href="#page-top">Home</a>
+                        <Link className="navbar-brand" to='#page-top'>Home</Link>
                     </div>
 
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -84,6 +83,7 @@ class Nav extends Component {
                             <li className="page-scroll">
                                 <a href="#about">About</a>
                             </li>
+                          
                         </ul>
                     </div>
                 </div>

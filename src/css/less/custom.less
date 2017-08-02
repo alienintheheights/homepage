@@ -6,7 +6,6 @@ a.active {
 	color: @primary-link;
 }
 
-
 .App {
   text-align: center;
 }
@@ -36,6 +35,13 @@ a.active {
 .circular--portrait img {
   width: 100%;
   height: auto;
+}
+
+.pic--portrait {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  overflow: hidden;
 }
 
 .show-listing {
@@ -142,5 +148,28 @@ a:hover.successLink {
 
 .gcolor {
     color: @flickr-arrow-color;
+}
+  
+.musicWrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.musicHeader {
+  padding: 10px 10px 10px 0;
+  font-size: 16px;
+}
+
+.trackWrapper {
+  padding: 10px 0 0 5px;
+  margin-top: 15px;
+  border: 1px @toggle-bgcolor solid;
+}
+
+.trackInfo {
+  font-size: 12px;
+  padding: 5px 0 10px 5px;
 }
 

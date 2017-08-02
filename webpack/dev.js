@@ -1,5 +1,31 @@
 'use strict'
 
-let makeWebpackConfig = require('./makeConfig')
+const webpack = require('webpack');
+const Merge = require('webpack-merge');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
-module.exports = makeWebpackConfig({env: "'dev'"})
+let makeWebpackConfig = require('./makeConfig');
+
+module.exports = Merge(makeWebpackConfig, {
+    devtool: 'cheap-module-source-map',
+    devServer: {
+        host: 'localhost',
+        port: 8080,
+        compress: true,
+        historyApiFallback: true,
+        // respond to 404s with index.html
+        watchOptions: {
+            ignored: /node_modules/
+        },
+        hot: true,
+        open: true
+    },
+    plugins: [
+        // webpack-dev-server enhancement plugins
+        new DashboardPlugin(),
+        new webpack.NamedModulesPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
+        // do not emit compiled assets that include errors
+    ]
+});
+

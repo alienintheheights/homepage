@@ -1,14 +1,16 @@
 {
   "name": "andrewlienhard-homepage",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "dependencies": {
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.11",
     "prop-types": "^15.5.0",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react": "^15.6.1",
+    "react-audioplayer": "^0.3.0",
+    "react-dom": "^15.6.1",
     "react-redux": "^5.0.4",
+    "react-router-dom": "^4.1.2",
     "redux": "^3.6.0",
     "redux-saga": "^0.15.3",
     "whatwg-fetch": "^2.0.3",
@@ -38,13 +40,14 @@
     "webpack": "2.4.1",
     "webpack-combine-loaders": "2.0.3",
     "webpack-dashboard": "0.3.0",
-    "webpack-dev-server": "2.4.2"
+    "webpack-dev-server": "2.4.2",
+    "webpack-merge": "4.1.0"
   },
   "scripts": {
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "start": "webpack-dashboard -t 'dash' -- webpack-dev-server --colors --inline  --config webpack/dev.js  ",
-    "build": "webpack -p --config webpack/prod.js --progress --colors -d --display-error-details"
+    "start": "webpack-dashboard -t 'dash' -- webpack-dev-server --colors --inline --hot  --config webpack/dev.js  ",
+    "build": " webpack -p --config webpack/prod.js --display-error-details"
   },
   "jest": {
     "testRegex": "\\-test\\.js$",

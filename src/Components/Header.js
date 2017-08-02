@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class Header extends Component {
     
     shouldComponentUpdate(nextProps, nextState) {
+        // 
         return false;
     }
     
@@ -12,11 +13,11 @@ class Header extends Component {
                 <div className="container" id="maincontent" tabIndex="-1">
                     <div className="row">
                         <div className="col-lg-12">
-                            <img className="img-responsive circular--portrait" src="img/synthlab.jpg" alt="" />
                             <div className="intro-text">
+                                <img className="img-responsive circular--portrait" src="img/synthlab.jpg" alt="" />
                                 <h2 className="name">Andrew Lienhard</h2>
                                 <hr className="star-light" />
-                                <span className="skills">Coder :: Musician</span>
+                                <span className="skills">Musician, Software Developer</span>
                             </div>
                         </div>
                     </div>

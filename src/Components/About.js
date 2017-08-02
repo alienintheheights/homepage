@@ -29,6 +29,7 @@ class About extends Component {
                             <hr className="star-light" />
                         </div>
                     </div>
+                     <img className="img-responsive mini-circular--portrait" src="img/andrew.jpg" alt="" />
                     <div className="row" dangerouslySetInnerHTML={profile} />
                 </div>
             </section>

@@ -1,5 +1,12 @@
 'use strict'
 
-let makeWebpackConfig = require('./makeConfig')
+const webpack = require('webpack');
+const Merge = require('webpack-merge');
+const path = require('path');
+let makeWebpackConfig = require('./makeConfig');
 
-module.exports = makeWebpackConfig({env: "'production'"})
+module.exports = Merge(makeWebpackConfig, {
+     plugins: [
+       
+    ]
+});
