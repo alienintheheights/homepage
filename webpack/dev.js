@@ -7,7 +7,7 @@ const DashboardPlugin = require('webpack-dashboard/plugin');
 let makeWebpackConfig = require('./makeConfig');
 
 module.exports = Merge(makeWebpackConfig, {
-    devtool: 'cheap-module-source-map',
+    devtool: 'cheap-module-eval-source-map',
     devServer: {
         host: 'localhost',
         port: 8080,
@@ -24,8 +24,11 @@ module.exports = Merge(makeWebpackConfig, {
         // webpack-dev-server enhancement plugins
         new DashboardPlugin(),
         new webpack.NamedModulesPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
+        new webpack.NoEmitOnErrorsPlugin(),
         // do not emit compiled assets that include errors
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development')
+        })
     ]
 });
 

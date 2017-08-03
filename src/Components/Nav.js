@@ -19,20 +19,11 @@ class Nav extends Component {
         // jQuery for page scrolling feature - requires jQuery Easing plugin
         // handles both hash and page links
         $('.page-scroll a').bind('click', function (event) {
-            var $anchor = $(this);
-            var href = $anchor.attr('href');
-            if (!href) return;
-            var idx = href.indexOf("#");
-            var isHash = (idx == 0);
-            var offset = isHash ? $($(href)).offset() : null;
-            if (offset) {
-                $('html, body').stop().animate({
-                 scrollTop: (offset) ? (offset.top - 50) : 0
+            // scenario one: the anchor exists in the page
+             $('html, body').stop().animate({
+                 scrollTop: 0
                 }, 1250, 'easeInOutExpo');
-                event.preventDefault();
-            } else {
-                window.location="/" + href;
-            }
+               // event.preventDefault();
         });
 
         // Highlight the top nav as scrolling occurs
@@ -63,27 +54,26 @@ class Nav extends Component {
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span className="sr-only">Toggle navigation</span> Menu <i className="fa fa-bars"></i>
                         </button>
-                        <Link className="navbar-brand" to='#page-top'>Home</Link>
+                        <Link className="navbar-brand" to='/'>Home</Link>
                     </div>
 
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul className="nav navbar-nav navbar-right">
                             <li className="hidden">
-                                <a href="#page-top"></a>
+                                <a href="/"></a>
                             </li>
                             <li className="page-scroll">
-                                <a href="#shows">Shows</a>
+                                <a href="/#shows">Shows</a>
                             </li>
                             <li className="page-scroll">
-                                <a href="#portfolio">Photos</a>
+                                <a href="/#gallery">Photos</a>
                             </li>
                             <li className="page-scroll">
-                                <a href="#word">XWord</a>
+                                <a href="/#xword">XWord</a>
                             </li>
                             <li className="page-scroll">
-                                <a href="#about">About</a>
+                                <a href="/#about">About</a>
                             </li>
-                          
                         </ul>
                     </div>
                 </div>

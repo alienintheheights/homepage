@@ -11,7 +11,7 @@ class FeatureImage extends Component {
             <img src={image[1]} alt={image[0]} />
             <div className="image-title">{image[0]}</div>
           </div>
-        ) : ""}
+        ) :  <div className="loader"/>}
       </div>
     )
   }

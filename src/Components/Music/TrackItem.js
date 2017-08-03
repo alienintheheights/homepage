@@ -13,7 +13,7 @@ class TrackItem extends Component {
 
     componentWillUnmount() {
         // This code can only be able to execute when the audio component is already mounted
-       // ReactDOM.findDOMNode(this.audioComponent).dispatchEvent(new Event('audio-pause'));
+       ReactDOM.findDOMNode(this.audioComponent).dispatchEvent(new Event('audio-pause'));
     }
 
     render() {
@@ -25,11 +25,11 @@ class TrackItem extends Component {
         return (
             <div className="trackWrapper">
                 <Audio
-                    width={400}
-                    height={400}
+                    width={300}
+                    height={300}
                     autoPlay={false}
                     playlist={playlist}
-                   // ref={audioComponent => { this.audioComponent = audioComponent; }}
+                    ref={audioComponent => { this.audioComponent = audioComponent; }}
                 />
                 <div className="trackInfo">
                    {track.comment}

@@ -13,4 +13,5 @@ dist.zip
 deploy.sh
 dist/*
 temp/*
+attic/*
 yarn-log.error

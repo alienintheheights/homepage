@@ -6,7 +6,9 @@ const path = require('path');
 let makeWebpackConfig = require('./makeConfig');
 
 module.exports = Merge(makeWebpackConfig, {
-     plugins: [
-       
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        })
     ]
 });
