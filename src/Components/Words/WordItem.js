@@ -14,7 +14,7 @@ class WordItem extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (this.props.word !== nextProps.word) {
+        if (this.props.selectedWord !== nextProps.selectedWord) {
             return true;
         }
         if ((nextState.currentLetterCount > 0 && this.state.currentLetterCount !== nextState.currentLetterCount) || nextState.reveal) {
@@ -33,10 +33,10 @@ class WordItem extends Component {
 
     showHint(e) {
         if (e) e.preventDefault()
-        const { word } = this.props
+        const { selectedWord } = this.props
         const { revealOrder, currentLetterCount } = this.state
         this.setState({
-            currentLetterCount: (currentLetterCount < word.entry.length) ? currentLetterCount + 1 : currentLetterCount,
+            currentLetterCount: (currentLetterCount < selectedWord.word.length) ? currentLetterCount + 1 : currentLetterCount,
             revealOrder: (revealOrder.length === 0) ? this.initRandState() : revealOrder
         })
     }
@@ -49,10 +49,10 @@ class WordItem extends Component {
     }
 
     initRandState() {
-        const { word } = this.props
+        const { selectedWord } = this.props
 
         let ranarray = []
-        for (var i = 0; i < word.entry.length; i++) {
+        for (var i = 0; i < selectedWord.word.length; i++) {
             ranarray[i] = i
         }
         shuffle(ranarray)
@@ -60,14 +60,14 @@ class WordItem extends Component {
     }
 
     revealNextLetter() {
-        const { word } = this.props
+        const { selectedWord } = this.props
         const { revealOrder, currentLetterCount, reveal } = this.state
 
-        if (!word) return ""
-        if (reveal) return word.entry
+        if (!selectedWord) return ""
+        if (reveal) return selectedWord.word
 
         let cluearry = []
-        let wordArray = word.entry.split("")
+        let wordArray = selectedWord.word.split("")
         for (var j = 0; j < currentLetterCount; j++) {
             cluearry[revealOrder[j]] = wordArray[revealOrder[j]].toUpperCase()
         }
@@ -78,16 +78,16 @@ class WordItem extends Component {
     }
 
     render() {
-        const { word } = this.props
+        const { selectedWord } = this.props
         const { currentLetterCount, reveal } = this.state
 
         const clue = this.revealNextLetter()
-        const hintBtnClass = (!reveal && word && currentLetterCount < word.entry.length) ? "btn btn-default btn-sm" : "btn btn-default btn-sm disabled"
+        const hintBtnClass = (!reveal && selectedWord && currentLetterCount < selectedWord.word.length) ? "btn btn-default btn-sm" : "btn btn-default btn-sm disabled"
 
         return (
             <div className="word-listing">
                 <div className="word-def">
-                    <h4>{word.definition}</h4>
+                    <h4>{selectedWord.definition}</h4>
                 </div>
                 <div className="word-answer">
                     <span className="word-reveal">{clue}</span>

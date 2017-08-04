@@ -13,7 +13,7 @@ class WordGame extends Component {
     }
 
     componentDidMount() {
-        this.props.fetchWords()
+       this.props.fetchWords()
     }
 
     getNextWord(e) {
@@ -42,7 +42,7 @@ class WordGame extends Component {
                         <div className="col-sm-6 col-sm-offset-3 text-center">
                             <div className="panel panel-default">
                                 <div className="panel-body game-panel">
-                                    {(wod && wod.entry) ? (<WordItem word={wod} {...me.props} />) : ""}
+                                    {(wod && wod.definition) ? (<WordItem selectedWord={wod} {...me.props} />) : (<div className="loader"/>)}
                                 </div>
                                 <div className="panel-footer">
                                     <div className="btn-group" role="group" aria-label="XWord Controls">

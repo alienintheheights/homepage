@@ -17,7 +17,6 @@ class Shows extends Component {
         return (this.props.data.shows !== nextProps.data.shows)
     }
 
-    // TODO make this load via REST API
     componentDidMount() {
         this.handleFutureClick()
     }
@@ -49,9 +48,9 @@ class Shows extends Component {
                             <div className="show-toggle">
                                 <a href="" onClick={this.getFutureShows}>Upcoming Shows</a> | <a href="" onClick={this.getPastShows}>Past Shows</a>
                             </div>
-                            {(shows) ? shows.map(function (value, index) {
+                            {(shows && shows.length !== 0) ? shows.map(function (value, index) {
                                 return (<ShowItem show={value} key={index} {...me.props} />);
-                            }) : ""}
+                            }) : (<div className="loader"/>)}
                         </div>
                     </div>
                 </div>

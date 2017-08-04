@@ -1,27 +1,17 @@
 
-import momentTz from 'moment-timezone'
-import { timeZone } from '../constants'
 import 'whatwg-fetch'
 
-const fullURL = "/data/gigdb.json"
-
-const filterShows = (response, getFutures) => {
-    const nowIs = momentTz().tz(timeZone)
-    const filteredShows = response.filter(function (value, index) {
-        const isFutureDate = nowIs <= momentTz(value.date).tz(timeZone)
-        return ((getFutures && isFutureDate) || (!getFutures && !isFutureDate)) ? value : null
-    })
-    return (getFutures) ? filteredShows : filteredShows.reverse()
-}
+const nodeEnv = process.env.NODE_ENV;
+const urlTemplate = (nodeEnv === "production") ? "/shows.php?dir=#DIR#" : "http://localhost/shows.php?dir=#DIR#";
 
 const requestShows = (payload) => {
     const returnState = Object.assign({}, payload) // copy
+    const sortDir = (payload.listFutures) ? "asc" : "desc"
+    const fullURL = urlTemplate.replace("#DIR#", sortDir)
     // builds using promises
     return fetch(fullURL)
         .then(function (response) {
-            return response.json();
-        }).then(function (response) {
-            return filterShows(response, payload.listFutures)
+            return response.json()
         }).catch(function (error) {
             console.log("Request error: " + error);
             returnState.error = error.toString()
