@@ -4,15 +4,14 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import { HashRouter } from 'react-router-dom'
-
 import { AppContainer } from 'react-hot-loader'
+
+import appState from './reducers'
+import mySaga from './sagas'
 
 import App from './Components/App'
 import Home from './Components/Home'
 import Tracks from './Components/Music/Tracks'
-
-import appState from './reducers'
-import mySaga from './sagas'
 
 // these are parsed by webpack
 require('./css/less/main.less');

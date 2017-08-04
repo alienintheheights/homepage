@@ -1,5 +1,8 @@
 import 'whatwg-fetch'
-const fullURL = "/data/vocabdb.json"
+
+const nodeEnv = process.env.NODE_ENV;
+const fullURL = (nodeEnv === "production") ? "/words.php" : "http://localhost/words.php";
+
 import { shuffle } from "../util"
 
 export const requestWords = (payload) => {

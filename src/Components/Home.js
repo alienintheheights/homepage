@@ -6,8 +6,6 @@ import Header from './Header'
 import Footer from './Footer'
 import About from './About'
 import Shows from './Shows/Shows'
-import WordGame from './Words/WordGame'
-import Gallery from './Photos/Gallery'
 
 class Home extends Component {
 
@@ -16,8 +14,6 @@ class Home extends Component {
       <div>
         <Header />
         <Shows dispatch={this.props.dispatch} />
-        <Gallery />
-        <WordGame dispatch={this.props.dispatch} />
         <About dispatch={this.props.dispatch} />
       </div>
     )
