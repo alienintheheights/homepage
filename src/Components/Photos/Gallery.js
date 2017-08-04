@@ -60,7 +60,7 @@ class Gallery extends Component {
     const { pageNumber } = this.state
 
     return (
-      <section className="success" id="portfolio">
+      <section className="success" id="photos">
         <div className="container page-scroll">
           <div className="row">
             <div className="col-lg-12 text-center">

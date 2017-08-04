@@ -15,7 +15,7 @@ const Main = () => (
             <Route path='/xword' component={WordGame} />
             <Route path='/shows' component={Shows} />
             <Route path='/about' component={About} />
-            <Route path='/gallery' component={Gallery} />
+            <Route path='/photos' component={Gallery} />
         </Switch>
     </main>
 )

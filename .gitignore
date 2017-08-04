@@ -1,11 +1,11 @@
 .bundle
 pkg/*
 build/*
+public/*.php
 public/images/*
 public/img/*
 public/music/*
 public/data/*
-public/flickr.php
 node_modules/*
 util/*
 build.zip
