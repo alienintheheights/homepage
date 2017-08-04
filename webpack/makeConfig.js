@@ -56,11 +56,9 @@ module.exports = {
     plugins: [
         new CopyWebpackPlugin([
             // Copy directory contents to {output}/to/directory/
-            { from: 'public/data', to: 'data' },
             { from: 'public/music', to: 'music' },
             { from: 'public/img', to: 'img' },
-            { from: 'public/favicon.ico', to: 'favicon.ico' },
-            { from: 'public/flickr.php', to: 'flickr.php' }
+            { from: 'public/favicon.ico', to: 'favicon.ico' }
         ]), // build optimization plugins
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../public/index.html'),
