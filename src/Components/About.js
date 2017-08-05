@@ -7,7 +7,9 @@ import { fetchProfile } from '../actions'
 class About extends Component {
 
     componentDidMount() {
-        this.props.fetchProfile()
+        if (!this.props.data || !this.props.data.profile) {
+             this.props.fetchProfile()
+        }
     }
 
     shouldComponentUpdate(nextProps, nextState) {

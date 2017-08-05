@@ -18,7 +18,9 @@ class Shows extends Component {
     }
 
     componentDidMount() {
-        this.handleFutureClick()
+        if (!this.props.data || this.props.data.shows.length === 0) {
+            this.handleFutureClick()
+        }
     }
 
     handlePastClick(e) {
@@ -46,7 +48,9 @@ class Shows extends Component {
                     <div className="row">
                         <div className="col-sm-6 col-sm-offset-3">
                             <div className="show-toggle">
-                                <a href="" onClick={this.getFutureShows}>Upcoming Shows</a> | <a href="" onClick={this.getPastShows}>Past Shows</a>
+                                <a href="" onClick={this.getFutureShows}><span className="glyphicon glyphicon-arrow-up" aria-hidden="true"/> Upcoming Shows</a> 
+                                <span className="glyphicon glyphicon-option-vertical" aria-hidden="true"/>
+                                <a href="" onClick={this.getPastShows}>Past Shows <span className="glyphicon glyphicon-arrow-down" aria-hidden="true"/></a>
                             </div>
                             {(shows && shows.length !== 0) ? shows.map(function (value, index) {
                                 return (<ShowItem show={value} key={index} {...me.props} />);

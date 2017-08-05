@@ -13,7 +13,9 @@ class WordGame extends Component {
     }
 
     componentDidMount() {
-       this.props.fetchWords()
+        if (!this.props.data || this.props.data.words.length === 0) {
+             this.props.fetchWords()
+        } 
     }
 
     getNextWord(e) {
