@@ -78,22 +78,21 @@ class WordItem extends Component {
     }
 
     render() {
-        const { selectedWord } = this.props
+        const { selectedWord, isMarked } = this.props
         const { currentLetterCount, reveal } = this.state
-
+        const defClass = (isMarked) ? "learnWord" : ""
         const clue = this.revealNextLetter()
         const hintBtnClass = (!reveal && selectedWord && currentLetterCount < selectedWord.word.length) ? "btn btn-default btn-sm" : "btn btn-default btn-sm disabled"
 
         return (
             <div className="word-listing">
                 <div className="word-def">
-                    <h4>{selectedWord.definition}</h4>
+                    <h4 className={defClass}>{selectedWord.definition}</h4>
                 </div>
                 <div className="word-answer">
                     <span className="word-reveal">{clue}</span>
                     <button className={hintBtnClass} onClick={this.showHint}>hint</button>
                     <button className={hintBtnClass} onClick={this.revealWord}>reveal</button>
-
                 </div>
             </div>
         )

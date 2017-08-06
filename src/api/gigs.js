@@ -2,7 +2,7 @@
 import 'whatwg-fetch'
 
 const nodeEnv = process.env.NODE_ENV;
-const urlTemplate = (nodeEnv === "production") ? "/api/shows.php?dir=#DIR#" : "http://localhost/api/shows.php?dir=#DIR#";
+const urlTemplate = (nodeEnv === "production") ? "/api/shows?dir=#DIR#" : "http://localhost/api/shows?dir=#DIR#";
 
 const requestShows = (payload) => {
     const returnState = Object.assign({}, payload) // copy

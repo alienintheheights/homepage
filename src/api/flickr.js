@@ -3,7 +3,7 @@ import 'whatwg-fetch'
 
 const nodeEnv = process.env.NODE_ENV;
 // URL for the REST call 
-const API_ENDPOINT = (nodeEnv === "production") ? `/api/flickr.php?` : `http://localhost/api/flickr.php?`;
+const API_ENDPOINT = (nodeEnv === "production") ? `/api/photos?` : `http://localhost/api/photos?`;
 
 export const fetchImages = (payload) => {
   const url = appendPaginationToURL(API_ENDPOINT, payload.page, payload.size)
