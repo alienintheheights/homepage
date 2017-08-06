@@ -12,7 +12,6 @@ export const requestWords = (payload) => {
         .then(function (response) {
             return response.json();
         }).then(function (response) {
-            shuffle(response)
             return response
         }).catch(function (error) {
             console.log("Request error: " + error);
