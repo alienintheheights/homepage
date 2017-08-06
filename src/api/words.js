@@ -1,7 +1,7 @@
 import 'whatwg-fetch'
 
 const nodeEnv = process.env.NODE_ENV;
-const fullURL = (nodeEnv === "production") ? "/words.php" : "http://localhost/words.php";
+const fullURL = (nodeEnv === "production") ? "/api/words.php" : "http://localhost/api/words.php";
 
 import { shuffle } from "../util"
 

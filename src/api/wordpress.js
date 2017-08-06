@@ -1,5 +1,5 @@
 const nodeEnv = process.env.NODE_ENV;
-const fullURL = (nodeEnv === "production") ? "/about.php" : "http://localhost/about.php";
+const fullURL = (nodeEnv === "production") ? "/api/about.php" : "http://localhost/api/about.php";
 
 export const requestProfile = (payload) => {
     const returnState = Object.assign({}, payload) // copy

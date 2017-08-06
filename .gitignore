@@ -1,6 +1,8 @@
 .bundle
 pkg/*
 build/*
+php/*
+config/*
 public/*.php
 public/images/*
 public/img/*
