@@ -29,7 +29,7 @@ class WordGame extends Component {
         })
     }
 
-   _hasWord(word) {
+    _hasWord(word) {
         const { marked } = this.state
         const { wod } = this.props.data
         let idx = marked.findIndex(curwod => curwod.word === wod.word)
@@ -103,14 +103,24 @@ class WordGame extends Component {
                     <div className="row">
                         <div className="col-sm-6 col-sm-offset-3">
                             <ul className="review-listing">
-                            {(hasItems) ? (<li className="review-listing"><div className="clearList"><a onClick={this.clearList}>clear list</a></div></li>) : ""}
-                            {(hasItems) ? marked.map(function (value, index) {
-                                return (
-                                    <li className="review-listing"><div key={index} className="markedWord">
-                                        <span className="removeItem glyphicon glyphicon-remove" aria-hidden="true" onClick={me.removeItem.bind(me, value.word)} />
-                                        <b>{value.word}</b> -- {value.definition}
-                                    </div></li>);
-                            }) : ("")}
+                                {(hasItems) ? (
+                                    <li className="review-listing">
+                                        <div className="clearList">
+                                            <a onClick={this.clearList}>clear list</a>
+                                        </div>
+                                    </li>
+                                    ) : ""
+                                }
+                                {(hasItems) ? marked.map(function (value, index) {
+                                    return (
+                                        <li className="review-listing">
+                                            <div key={index} className="markedWord">
+                                                <span className="removeItem glyphicon glyphicon-remove" aria-hidden="true" onClick={me.removeItem.bind(me, value.word)} />
+                                                <b>{value.word}</b> -- {value.definition}
+                                            </div>
+                                        </li>);
+                                    }
+                                ) : ""}
                             </ul>
                         </div>
                     </div>

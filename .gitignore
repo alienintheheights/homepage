@@ -1,7 +1,8 @@
 .bundle
 pkg/*
 build/*
-php/*
+php/api.inc.php
+php/dbinfo.inc.php
 config/*
 public/*.php
 public/images/*
