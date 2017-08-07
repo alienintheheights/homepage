@@ -10,12 +10,9 @@ class WordGame extends Component {
         super(props);
         this.getNextWord = this.getNextWord.bind(this)
         this.getLastWord = this.getLastWord.bind(this)
-        this.markWord = this.markWord.bind(this)
         this.clearList = this.clearList.bind(this)
-        var m = JSON.parse(localStorage.getItem('markedWords'))
-        console.log(m);
         this.state = {
-            marked: m || []
+            marked: JSON.parse(localStorage.getItem('markedWords')) || []
         }
     }
 
@@ -25,13 +22,23 @@ class WordGame extends Component {
         }
     }
 
+    _updateList(item) {
+        localStorage.setItem('markedWords', JSON.stringify(item));
+        this.setState({
+            marked: item || []
+        })
+    }
+
+   _hasWord(word) {
+        const { marked } = this.state
+        const { wod } = this.props.data
+        let idx = marked.findIndex(curwod => curwod.word === wod.word)
+        return (idx === -1) ? false : true
+    }
 
     clearList(e) {
         if (e) e.preventDefault()
-        localStorage.setItem('markedWords', null)
-        this.setState({
-            marked: []
-        })
+        this._updateList(null)
     }
 
     removeItem(selectedWord) {
@@ -40,31 +47,17 @@ class WordGame extends Component {
         let newMark = marked.filter(function (candidate) {
             return candidate.word !== selectedWord;
         });
-        localStorage.setItem('markedWords', JSON.stringify(newMark));
-        this.setState({
-            marked: newMark
-        })
-    }
-
-    hasWord(word) {
-        const { marked } = this.state
-        const { wod } = this.props.data
-        let idx = marked.findIndex(curwod => curwod.word === wod.word)
-        return (idx === -1) ? false : true
+        this._updateList(newMark)
     }
 
     markWord(e) {
         if (e) e.preventDefault()
-        const { marked } = this.state
         const { wod } = this.props.data
-        let newMark = Object.assign([], marked) // copy
-        if (!this.hasWord(wod)) {
-            newMark.push(wod)
-            localStorage.setItem('markedWords', JSON.stringify(newMark));
+        if (!this._hasWord(wod)) {
+            let newMark = Object.assign([], this.state.marked) // copy
+            newMark.unshift(wod)
+            this._updateList(newMark)
         }
-        this.setState({
-            marked: newMark
-        })
     }
 
     getNextWord(e) {
@@ -80,7 +73,8 @@ class WordGame extends Component {
     render() {
         const { marked } = this.state
         const { wod } = this.props.data
-        const hasItems = (marked.length !== 0);
+        const hasItems = (marked.length !== 0)
+        const markHandler = this.markWord.bind(this)
         var me = this
         return (
             <section className="" id="word">
@@ -95,13 +89,12 @@ class WordGame extends Component {
                         <div className="col-sm-6 col-sm-offset-3 text-center">
                             <div className="panel panel-default">
                                 <div className="panel-body game-panel">
-                                    {(wod && wod.definition) ? (<WordItem isMarked={me.hasWord(wod.word)} selectedWord={wod} {...me.props} />) : (<div className="loader" />)}
+                                    {(wod && wod.definition) ? (<WordItem isMarked={me._hasWord(wod.word)} markHandler={markHandler} selectedWord={wod} {...me.props} />) : (<div className="loader" />)}
                                 </div>
                                 <div className="panel-footer">
                                     <div className="btn-group" role="group" aria-label="XWord Controls">
                                         <button type="button" className="btn btn-default" onClick={this.getLastWord}>Last Word</button>
                                         <button type="button" className="btn btn-default" onClick={this.getNextWord}>Next Word</button>
-                                        <button type="button" className="btn btn-default" onClick={this.markWord}>Add to Review List</button>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +102,6 @@ class WordGame extends Component {
                     </div>
                     <div className="row">
                         <div className="col-sm-6 col-sm-offset-3">
-                            <h3>Review List</h3>
                             {(hasItems) ? (<div className="clearList"><a onClick={this.clearList}>clear list</a></div>) : ""}
                             {(hasItems) ? marked.map(function (value, index) {
                                 return (

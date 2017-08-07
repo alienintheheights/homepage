@@ -86,14 +86,19 @@ class WordItem extends Component {
 
         return (
             <div className="word-listing">
-                <div className="word-def">
-                    <h4 className={defClass}>{selectedWord.definition}</h4>
-                </div>
+                <button className={hintBtnClass} onClick={this.showHint}>hint <span className="glyphicon glyphicon-question-sign"/></button>
+                <button className={hintBtnClass} onClick={this.revealWord}>reveal <span className="glyphicon glyphicon-eye-open"/></button>
+                <button className="btn btn-default btn-sm" onClick={this.props.markHandler}>save <span className="glyphicon glyphicon-floppy-disk"/></button>
                 <div className="word-answer">
                     <span className="word-reveal">{clue}</span>
-                    <button className={hintBtnClass} onClick={this.showHint}>hint</button>
-                    <button className={hintBtnClass} onClick={this.revealWord}>reveal</button>
                 </div>
+                <div className="word-def">
+                    <h4>
+                        {(isMarked)? (<span className={"glyphicon glyphicon-star " + defClass}/>) : ""}
+                        {selectedWord.definition}
+                        </h4>
+                </div>
+                
             </div>
         )
     }
