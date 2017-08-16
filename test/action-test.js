@@ -16,9 +16,10 @@ describe('actions', () => {
   }),
     it('should load next image', () => {
       const expectedAction = {
-        type: 'SELECT_IMAGE'
+        type: 'SELECT_IMAGE',
+        image
       }
-      expect(actions.selectImage()).toEqual(expectedAction)
+      expect(actions.selectImage(image)).toEqual(expectedAction)
     }),
     it('should fetch shows', () => {
       const expectedAction = {
@@ -48,5 +49,10 @@ describe('actions', () => {
         type: 'LAST_WORD'
       }
       expect(actions.getLastWord()).toEqual(expectedAction)
+    }), it('should fetch profile', () => {
+      const expectedAction = {
+        type: 'PROFILE_REQUESTED'
+      }
+      expect(actions.fetchProfile()).toEqual(expectedAction)
     })
 })

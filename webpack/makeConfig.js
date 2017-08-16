@@ -18,7 +18,7 @@ module.exports = {
             // activate HMR for React
             // bundle the client for hot reloading
             // only- means to only hot reload for successful updates
-            path.resolve(__dirname, '../src/index.js')
+            path.resolve(__dirname, '../js/index.js')
         ]
     },
     output: {

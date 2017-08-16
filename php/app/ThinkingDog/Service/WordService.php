@@ -5,13 +5,14 @@ use ThinkingDog\Database\SimpleDB;
 
 class WordService
 {
-    // SimpleDB class
+    // DBRunner class
     private $formatDB;
-    // Query for Words: TEMP table name for testing!
+    // Query for Words
     private $query="SELECT word, definition, type FROM al_xwords";
 
     function __construct()
     {
+         // decorate DBRunner with FormatDB
          $this->formatDB = new JSONFormatDB(new SimpleDB());
     }
 
@@ -22,9 +23,7 @@ class WordService
     }
 
     function getSortedWords()
-    {   
+    {
         return $this->formatDB->run($this->query + " ORDER BY word");
     }
 }
-
-?>
