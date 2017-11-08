@@ -1,12 +1,11 @@
-import * as types from '../src/constants'
-import appState from '../src/reducers'
+import * as types from '../js/constants'
+import appState from '../js/reducers'
 
 const initState = {
   words: [],
-  wordIndex: 0,
-  wod: {},
   images: [],
   shows: [],
+  showsFetched: false,
   profile: null
 }
 const fauxWords = [{ "entry": "fake1" }, { "entry": "fake2" }]
@@ -30,41 +29,7 @@ describe('reducers', () => {
         words: fauxWords,
         wod: fauxWords[0]
       })
-    }),
-
-    it('should return the next word', () => {
-      const nextwordaction = {
-        type: 'NEXT_WORD'
-      }
-      const nextwordstate = {
-        words: fauxWords,
-        wordIndex: 0,
-        wod: fauxWords[0]
-      }
-      expect(
-        appState(nextwordstate, nextwordaction)
-      ).toEqual({
-        ...nextwordstate,
-        wordIndex: 1,
-        wod: fauxWords[1]
-      })
-    }),
-
-    it('should return the last word', () => {
-      const nextwordaction = {
-        type: 'LAST_WORD'
-      }
-      const nextwordstate = {
-        words: fauxWords,
-        wordIndex: 1,
-        wod: fauxWords[1]
-      }
-      expect(
-        appState(nextwordstate, nextwordaction)
-      ).toEqual({
-        ...nextwordstate,
-        wordIndex: 0,
-        wod: fauxWords[0]
-      })
     })
+
+    
 })

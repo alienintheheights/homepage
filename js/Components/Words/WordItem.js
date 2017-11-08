@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { shuffle } from '../../util'
+import * as c from '../../constants'
 
 class WordItem extends Component {
     constructor(props) {
@@ -96,7 +97,7 @@ class WordItem extends Component {
                     <h4>
                         {(isMarked)? (<span className={"glyphicon glyphicon-star " + defClass}/>) : ""}
                         {selectedWord.definition}
-                        </h4>
+                    </h4>
                 </div>
                 
             </div>

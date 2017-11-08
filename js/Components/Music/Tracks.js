@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import { registerAudioPlayer } from '../../actions'
 
 import TrackItem from './TrackItem'
 
@@ -22,61 +21,67 @@ class Tracks extends Component {
     // TODO replace with API
     _getPlaylist = (playlistPic) => [
         {
-            src: 'music/round.mp3',
+            src: 'music/bigorchestra.mp3',
             img: playlistPic,
-            name: 'Newsy',
-            comment: "Layered piano parts played in rounds. With handclaps.",
-            id: "1"
+            name: 'Big Orchestra',
+            comment: "Faux Orchestra Looping and Modulating"
+        },
+        {
+            src: 'music/bigpiano.mp3',
+            img: playlistPic,
+            name: 'Big Piano',
+            comment: "Piano Ostinatos"
         },
         {
             src: 'music/mysterious.mp3',
             img: playlistPic,
             name: 'Mysterious',
-            comment: "If Tom Waits did the theme...",
+            comment: "Sort of Tom Waits meets Cliff Martinez",
             id: "2"
         },
         {
-            src: 'music/snarky.mp3',
+            src: 'music/jazz.mp3',
             img: playlistPic,
-            name: 'Snarky',
-            comment: "If Snarky Puppy did the theme...",
-            id: "3"
+            name: 'Jazz Version',
+            comment: "Jazz bossa with guitar and vibes",
+            id: "8"
         },
         {
             src: 'music/solaris.mp3',
             img: playlistPic,
             name: 'Solaris',
-            comment: "Soundtracky",
-            id: "4"
+            comment: "Stranger Things + Solaris"
         },
         {
-            src: 'music/neosoul.mp3',
+            src: 'music/police.mp3',
             img: playlistPic,
-            name: 'Esperanza',
-            comment: "If Esperanza did the theme...",
-            id: "5"
-
+            name: '70s Beat',
+            comment: "Reggatta",
+            id: "10"
+        },
+        {
+            src: 'music/movie.mp3',
+            img: playlistPic,
+            name: 'Movie',
+            comment: "Movie piano"
+        },
+        {
+            src: 'music/round.mp3',
+            img: playlistPic,
+            name: 'Newsy',
+            comment: "Layered piano parts played in rounds. With handclaps."
+        },
+        {
+            src: 'music/snarky.mp3',
+            img: playlistPic,
+            name: 'Snarky',
+            comment: "A Snarky Puppy inspired theme."
         },
         {
             src: 'music/world.mp3',
             img: playlistPic,
             name: 'World',
-            comment: "World Choir",
-            id: "6"
-        },
-        {
-            src: 'music/theme74.mp3',
-            img: playlistPic,
-            name: 'Peppy Television',
-            comment: "7/4 Piano Intro theme",
-            id: "7"
-        },
-        {
-            src: 'music/jazz.mp3',
-            img: playlistPic,
-            name: 'Jazz Version, Classic NPR',
-            comment: "Classic NPR Jazz style",
-            id: "8"
+            comment: "Choir. Weird."
         }
     ]
 
@@ -100,7 +105,7 @@ class Tracks extends Component {
                 <div className="row">
                     <div className="col-lg-12 ">
                         <div className="musicPlayer">
-                            <h3>Potential new themes</h3>
+                            <h3>Potential new themes <small>last update, 8/20/17, 8pm</small></h3>
                             <TrackItem
                                 track={currentTrack}
                                 key={currentId}
@@ -145,5 +150,5 @@ function select(state) {
 
 
 export default connect(
-    select, { registerAudioPlayer }
+    select, {  }
 )(Tracks)

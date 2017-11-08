@@ -1,5 +1,5 @@
-import * as actions from '../src/actions/index.js'
-import * as types from '../src/constants'
+import * as actions from '../js/actions/index.js'
+import * as types from '../js/constants'
 
 describe('actions', () => {
   it('should fetch images', () => {
@@ -17,9 +17,9 @@ describe('actions', () => {
     it('should load next image', () => {
       const expectedAction = {
         type: 'SELECT_IMAGE',
-        image
+        image: {}
       }
-      expect(actions.selectImage(image)).toEqual(expectedAction)
+      expect(actions.selectImage({})).toEqual(expectedAction)
     }),
     it('should fetch shows', () => {
       const expectedAction = {
@@ -39,17 +39,7 @@ describe('actions', () => {
       }
       expect(actions.fetchWords()).toEqual(expectedAction)
     }),
-    it('should fetch next word', () => {
-      const expectedAction = {
-        type: 'NEXT_WORD'
-      }
-      expect(actions.getNextWord()).toEqual(expectedAction)
-    }), it('should fetch last word', () => {
-      const expectedAction = {
-        type: 'LAST_WORD'
-      }
-      expect(actions.getLastWord()).toEqual(expectedAction)
-    }), it('should fetch profile', () => {
+    it('should fetch profile', () => {
       const expectedAction = {
         type: 'PROFILE_REQUESTED'
       }

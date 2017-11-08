@@ -27,24 +27,11 @@ export const fetchPastShows = () => {
   }
 }
 
-export const getNextWord = () => {
-  return { 
-    type: 'NEXT_WORD'
-  }
-}
-
-export const getLastWord = () => {
-  return { 
-    type: 'LAST_WORD'
-  }
-}
-
 export const fetchWords = () => {
   return {
     type: 'WORDS_FETCH_REQUESTED'
   }
 }
-
 
 export const fetchProfile = () => {
   return {
