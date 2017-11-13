@@ -12,7 +12,6 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Header />
         <Shows dispatch={this.props.dispatch} />
         <About dispatch={this.props.dispatch} />
       </div>

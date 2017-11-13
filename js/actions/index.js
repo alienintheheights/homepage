@@ -1,8 +1,9 @@
 
+import * as c from '../constants'
 
 export const loadImages = (payload) => {
   return {
-    type: 'IMAGES_FETCH_REQUESTED',
+    type: c.IMAGES_FETCH_REQUESTED,
     page: payload.page,
     size: payload.size
   }
@@ -10,32 +11,32 @@ export const loadImages = (payload) => {
 
 export function selectImage(image) {
   return {
-    type: 'SELECT_IMAGE',
+    type: c.SELECT_IMAGE,
     image
   }
 }
 
 export const fetchShows = () => {
   return {
-    type: 'SHOW_FETCH_REQUESTED'
+    type: c.SHOW_FETCH_REQUESTED
   }
 }
 
 export const fetchPastShows = () => {
   return {
-    type: 'PASTSHOW_FETCH_REQUESTED'
+    type: c.PASTSHOW_FETCH_REQUESTED
   }
 }
 
 export const fetchWords = () => {
   return {
-    type: 'WORDS_FETCH_REQUESTED'
+    type: c.WORDS_FETCH_REQUESTED
   }
 }
 
 export const fetchProfile = () => {
   return {
-    type: 'PROFILE_REQUESTED'
+    type: c.PROFILE_REQUESTED
   }
 }
 

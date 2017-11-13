@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import * as c from '../../constants'
 
-import { getNextWord, getLastWord, fetchWords, resetWords } from '../../actions'
+import { fetchWords } from '../../actions'
 import WordItem from './WordItem'
 
 class WordGame extends Component {
@@ -203,5 +203,5 @@ function select(state) {
 
 // Wrap the component to inject dispatch and state into it
 export default connect(
-    select, { getNextWord, getLastWord, fetchWords, resetWords}
+    select, { fetchWords}
 )(WordGame)

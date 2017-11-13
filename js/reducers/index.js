@@ -1,9 +1,10 @@
 
 /**
  * The Application state.
- * @param {*} state 
- * @param {*} action 
  */
+
+import * as c from '../constants'
+
 const appState = (state = {
   words: [],
   images: [],
@@ -14,25 +15,25 @@ const appState = (state = {
   
   switch (action.type) {
 
-    case 'IMAGES_RECEIVED':
+    case c.IMAGES_RECEIVED:
       return {...state, images: action.images};
 
-    case 'SELECT_IMAGE':
+    case c.SELECT_IMAGE:
       return {...state, selectedImage: action.image};
 
-    case 'LOAD_IMAGES_FAILURE':
+    case c.LOAD_IMAGES_FAILURE:
       return state;
 
-    case 'PROFILE_REQUESTED_SUCCEEDED':
+    case c.PROFILE_REQUESTED_SUCCEEDED:
       return { ...state, profile: action.profile }
 
-    case 'SHOW_FETCH_SUCCEEDED':
+    case c.SHOW_FETCH_SUCCEEDED:
       return { ...state, shows: action.shows, showsFetched: true }
 
-    case 'PASTSHOW_FETCH_SUCCEEDED':
+    case c.PASTSHOW_FETCH_SUCCEEDED:
       return { ...state, shows: action.shows, showsFetched: true }
 
-    case 'WORDS_FETCH_SUCCEEDED':
+    case c.WORDS_FETCH_SUCCEEDED:
       return { ...state, words: action.words,  wod: action.words[0] }
 
     default:
