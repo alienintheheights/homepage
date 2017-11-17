@@ -65,8 +65,11 @@ class Gallery extends Component {
           <div className="row">
             <div className="col-lg-12 text-center">
               <h2>Flickr Photos</h2>
+              Photos taken by Andrew and Steph via our <a href="https://www.flickr.com/photos/lienhard/" className="successLink">Flickr stream</a>.<br/>
+              Canon 5D Mark ii and Rebel XTi, various iPhones. One day we'll own a Leica. 
+          
               <hr className="star-primary" />
-            </div>
+                </div>
           </div>
           <div className="row">
             <div className="col-lg-12 text-center">

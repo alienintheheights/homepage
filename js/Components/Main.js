@@ -6,6 +6,7 @@ import About from './About'
 import Shows from './Shows/Shows'
 import WordGame from './Words/WordGame'
 import Gallery from './Photos/Gallery'
+import Writing from './Writing'
 
 const Main = () => (
     <main>
@@ -16,6 +17,7 @@ const Main = () => (
             <Route path='/shows' component={Shows} />
             <Route path='/about' component={About} />
             <Route path='/photos' component={Gallery} />
+            <Route path='/writing' component={Writing} />
         </Switch>
     </main>
 )
