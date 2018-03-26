@@ -8,7 +8,6 @@ import Footer from './Footer'
 
 const App = () => (
       <div>
-        <Nav/>
         <Main/>
         <Footer />
       </div>
@@ -28,4 +27,3 @@ function select(state) {
 
 import { withRouter } from 'react-router-dom'
 export default withRouter(connect(select)(App))
-

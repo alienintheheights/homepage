@@ -1,9 +1,16 @@
+body {
+	 background-color: #fff;
+}
 a,
 a:hover,
 a:focus,
 a:active,
 a.active {
 	color: @primary-link;
+}
+
+hr {
+	border: 1px solid rgb(228, 228, 228);
 }
 
 .App {
@@ -18,6 +25,7 @@ a.active {
 .spacer {
   padding-right: 5px;
 }
+
 
 .circular--portrait {
   position: relative;
@@ -46,6 +54,11 @@ a.active {
   width: 270px;
   height: 270px;
   overflow: hidden;
+}
+
+.about-listing {
+	padding-bottom: 10px;
+  padding-left: 4px;
 }
 
 .show-listing {
@@ -134,41 +147,48 @@ a:hover.successLink {
 div.review-listing {
   width: 200px;
 }
- 
+
+h2 {
+	font-size: 20px;
+	text-transform: lowercase;
+	letter-spacing: 2.9px;
+	text-align: left;
+}
+
 h2.review-listing {
   font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
- 
+
 ul.review-listing {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
- 
+
 li.review-listing {
   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
 }
- 
+
 li.review-listing:last-child {
   border: none;
 }
- 
+
 li.review-listing a.review-listing {
   text-decoration: none;
   color: #000;
   display: block;
   width: 200px;
- 
+
   -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
   -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
   -o-transition: font-size 0.3s ease, background-color 0.3s ease;
   -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
   transition: font-size 0.3s ease, background-color 0.3s ease;
 }
- 
+
 li.review-listing a.review-listing:hover {
   font-size: 30px;
   background: #f6f6f6;
@@ -224,7 +244,7 @@ li.review-listing a.review-listing:hover {
 .gcolor {
     color: @flickr-arrow-color;
 }
-  
+
 .musicWrapper {
    display: flex;
    align-items: center;
@@ -321,3 +341,10 @@ li.review-listing a.review-listing:hover {
   margin: 5px;
 }
 
+.pad-the-top {
+	padding-top: 20px;
+}
+
+.pad-the-bottom {
+	padding-bottom: 20px;
+}

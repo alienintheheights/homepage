@@ -8,7 +8,7 @@ class About extends Component {
 
     componentDidMount() {
         if (!this.props.data || !this.props.data.profile) {
-             this.props.fetchProfile()
+            this.props.fetchProfile()
         }
     }
 
@@ -28,21 +28,45 @@ class About extends Component {
                     <div className="row">
                         <div className="col-lg-12 text-center">
                             <h2>About</h2>
-                            <hr className="star-light" />
                         </div>
                     </div>
                     <div className="row">
-                         <div className="col-lg-3 text-right">
-                            <img className="img-responsive mini-circular--portrait" src="img/andrew.jpg" alt="" />
-                        </div>
-                         <div className="col-lg-9 text-left">
-                            {profile ?   
-                            (<div className="row loader" dangerouslySetInnerHTML={profile}/>) : 
-                            <div className="loader"/>}
-                        </div>
-                        
+                        <div className="col-sm-6 col-sm-offset-3">
+                         {profile ?
+                                (<div className="loader bio" dangerouslySetInnerHTML={profile} />) :
+                                <div className="loader" />}
+                          <img src="/andrew/atcezanne.jpg"  className="responsive mini-circular--portrait " />
+                      
+                           </div>
                     </div>
-                    
+                    <div className="row">
+                        <div className="col-lg-12 ">
+                            <h2>Contact</h2>
+                        </div>
+
+
+                        <ul className="col-sm-6 col-sm-offset-3 list-inline">
+                            <li>
+                                andrew.lienhard@gmail.com
+                                </li>
+                            <li>
+                                <a href="https://twitter.com/aendroulius" onClick={this.handleClick.bind(this, 'https://twitter.com/aendroulius')} className="btn-social btn-outline"><span className="sr-only">Twitter</span><i className="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/andrewlienhard/" onClick={this.handleClick.bind(this, 'https://www.linkedin.com/in/andrewlienhard/')} className="btn-social btn-outline"><span className="sr-only">Linked In</span><i className="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.flickr.com/photos/lienhard/" onClick={this.handleClick.bind(this, 'https://www.flickr.com/photos/lienhard')} className="btn-social btn-outline"><span className="sr-only">Flickr</span><i className="fa fa-fw fa-flickr"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://soundcloud.com/andrewishere" onClick={this.handleClick.bind(this, 'https://soundcloud.com/andrewishere')} className="btn-social btn-outline"><span className="sr-only">Soundcloud</span><i className="fa fa-fw fa-soundcloud"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://fauxmat.wordpress.com" onClick={this.handleClick.bind(this, 'http://fauxmat.wordpress.com')} className="btn-social btn-outline"><span className="sr-only">Wordpress</span><i className="fa fa-fw fa-wordpress"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
             </section>
         );

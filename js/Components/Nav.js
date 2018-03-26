@@ -66,12 +66,6 @@ class Nav extends Component {
                                 <a href="/#shows">Shows</a>
                             </li>
                             <li className="page-scroll">
-                                <a href="/#photos">Photos</a>
-                            </li>
-                            <li className="page-scroll">
-                                <a href="/#writing">Writing</a>
-                            </li>
-                            <li className="page-scroll">
                                 <a href="/#xword">XWord</a>
                             </li>
                             <li className="page-scroll">

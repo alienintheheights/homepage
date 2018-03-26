@@ -58,6 +58,7 @@ module.exports = {
             // Copy directory contents to {output}/to/directory/
             { from: 'public/music', to: 'music' },
             { from: 'public/img', to: 'img' },
+            { from: 'public/andrew', to: 'andrew' },
             { from: 'public/favicon.ico', to: 'favicon.ico' },
             { from: 'php', to: 'api' }
         ]), // build optimization plugins

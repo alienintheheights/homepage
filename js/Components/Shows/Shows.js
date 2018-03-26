@@ -41,23 +41,22 @@ class Shows extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">
-                            <h2>Where I'm Playing</h2>
-                            <hr className="star-primary" />
+                            <h2>Shows</h2>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-sm-6 col-sm-offset-3">
                             <div className="show-toggle">
-                                <a href="" onClick={this.getFutureShows}><span className="glyphicon glyphicon-arrow-up" aria-hidden="true"/> Upcoming Shows</a> 
-                                <span className="glyphicon glyphicon-option-vertical" aria-hidden="true"/>
-                                <a href="" onClick={this.getPastShows}>Past Shows <span className="glyphicon glyphicon-arrow-down" aria-hidden="true"/></a>
+                                <a href="" onClick={this.getFutureShows}><span className="glyphicon glyphicon-arrow-up" aria-hidden="true" /> Upcoming Shows</a>
+                                <span className="glyphicon glyphicon-option-vertical" aria-hidden="true" />
+                                <a href="" onClick={this.getPastShows}>Past Shows <span className="glyphicon glyphicon-arrow-down" aria-hidden="true" /></a>
                             </div>
-                            {(showsFetched) ? 
+                            {(showsFetched) ?
                                 ((shows && shows.length !== 0) ? shows.map(function (value, index) {
                                     return (<ShowItem show={value} key={index} {...me.props} />);
-                                     }) 
-                                     : (<div className="show-nonelisted">No shows scheduled at this time</div>)
-                                ) : (<div className="loader"/>) }
+                                })
+                                    : (<div className="show-nonelisted">No shows scheduled at this time</div>)
+                                ) : (<div className="loader" />)}
                         </div>
                     </div>
                 </div>

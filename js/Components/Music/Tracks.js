@@ -19,32 +19,18 @@ class Tracks extends Component {
     _getImg = () => "img/engines.png"
 
     // TODO replace with API
-    _getPlaylist = (playlistPic) => [
+    _getPlaylist = (playlistPic) => [   
         {
-            src: 'music/bigorchestra.mp3',
+            src: 'music/moody5.mp3',
             img: playlistPic,
-            name: 'Big Orchestra',
-            comment: "Faux Orchestra Looping and Modulating"
-        },
-        {
-            src: 'music/bigpiano.mp3',
-            img: playlistPic,
-            name: 'Big Piano',
-            comment: "Piano Ostinatos"
+            name: 'Moody',
+            comment: "Moody in 5"
         },
         {
             src: 'music/mysterious.mp3',
             img: playlistPic,
             name: 'Mysterious',
-            comment: "Sort of Tom Waits meets Cliff Martinez",
-            id: "2"
-        },
-        {
-            src: 'music/jazz.mp3',
-            img: playlistPic,
-            name: 'Jazz Version',
-            comment: "Jazz bossa with guitar and vibes",
-            id: "8"
+            comment: "Sort of Tom Waits meets Cliff Martinez"
         },
         {
             src: 'music/solaris.mp3',
@@ -53,17 +39,16 @@ class Tracks extends Component {
             comment: "Stranger Things + Solaris"
         },
         {
-            src: 'music/police.mp3',
+            src: 'music/jazz.mp3',
             img: playlistPic,
-            name: '70s Beat',
-            comment: "Reggatta",
-            id: "10"
+            name: 'Jazz Version',
+            comment: "Jazz bossa with guitar and vibes"
         },
         {
-            src: 'music/movie.mp3',
+            src: 'music/world.mp3',
             img: playlistPic,
-            name: 'Movie',
-            comment: "Movie piano"
+            name: 'World',
+            comment: "Choir."
         },
         {
             src: 'music/round.mp3',
@@ -72,16 +57,28 @@ class Tracks extends Component {
             comment: "Layered piano parts played in rounds. With handclaps."
         },
         {
+            src: 'music/police.mp3',
+            img: playlistPic,
+            name: '70s Beat',
+            comment: "Reggatta"
+        },
+        {
             src: 'music/snarky.mp3',
             img: playlistPic,
             name: 'Snarky',
             comment: "A Snarky Puppy inspired theme."
         },
         {
-            src: 'music/world.mp3',
+            src: 'music/neosoul.mp3',
             img: playlistPic,
-            name: 'World',
-            comment: "Choir. Weird."
+            name: 'Groove Based',
+            comment: "Backbeat"
+        },
+        {
+            src: 'music/movie.mp3',
+            img: playlistPic,
+            name: 'Movie',
+            comment: "Movie piano"
         }
     ]
 

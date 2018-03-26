@@ -12,8 +12,8 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Shows dispatch={this.props.dispatch} />
         <About dispatch={this.props.dispatch} />
+        <Shows dispatch={this.props.dispatch} />
       </div>
     )
   }
@@ -33,4 +33,3 @@ function select(state) {
 
 import { withRouter } from 'react-router-dom'
 export default withRouter(connect(select)(Home))
-
