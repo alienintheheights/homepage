@@ -1,0 +1,522 @@
+[
+    {
+        "event_id": "1",
+        "event_name": "Dean Moore Quartet",
+        "venue_name": "Cezanne",
+        "venue_url": "https:\/\/www.facebook.com\/cezannejazz\/",
+        "show_date_start": "2017-03-18 21:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "2",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-03-24 17:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "3",
+        "event_name": "Kim Prevost and Bill Solley: Live Recording",
+        "venue_name": "Lucky Run Studio",
+        "venue_url": "https:\/\/www.kimandbill.com",
+        "show_date_start": "2017-03-25 18:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "4",
+        "event_name": "Post Oak School Book Fair (duo with Thomas Helton)",
+        "venue_name": "Brazos Bookstore",
+        "venue_url": "http:\/\/www.brazosbookstore.com",
+        "show_date_start": "2017-04-02 18:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "5",
+        "event_name": "David Craig Quartet (ft. Dennis Dotson)",
+        "venue_name": "Cezanne",
+        "venue_url": "https:\/\/www.facebook.com\/cezannejazz\/",
+        "show_date_start": "2017-04-07 21:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "6",
+        "event_name": "Passover services at SHMA KOLEINU",
+        "venue_name": "SHMA KOLEINU",
+        "venue_url": "http:\/\/www.brazosbookstore.com",
+        "show_date_start": "2017-04-10 18:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "7",
+        "event_name": "Trio with George Coward and Mark Simmons",
+        "venue_name": "Sambuca",
+        "venue_url": "http:\/\/www.houston.sambucarestaurant.com\/home",
+        "show_date_start": "2017-04-11 19:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "8",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-05-03 17:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "9",
+        "event_name": "Shabbat services at SHMA KOLEINU",
+        "venue_name": "SHMA KOLEINU",
+        "venue_url": "http:\/\/www.shmakoleinu.com",
+        "show_date_start": "2017-05-05 18:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "10",
+        "event_name": "Shabbat services at HCRJ",
+        "venue_name": "HCRJ",
+        "venue_url": "http:\/\/hcrj.org\/",
+        "show_date_start": "2017-05-12 18:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "11",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-05-21 11:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "12",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-05-31 17:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "13",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-06-04 11:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "14",
+        "event_name": "Jordan Almes Trio",
+        "venue_name": "Khon's Cafe",
+        "venue_url": "https:\/\/www.facebook.com\/KHONS-winedartscoffeeart-112703029167\/?rf=396628027019261",
+        "show_date_start": "2017-06-07 20:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "15",
+        "event_name": "Warren Sneed Quartet",
+        "venue_name": "Cezanne",
+        "venue_url": "https:\/\/www.facebook.com\/cezannejazz\/",
+        "show_date_start": "2017-06-24 21:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "16",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-06-28 17:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "17",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-07-05 17:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "18",
+        "event_name": "Will Kennedy and Friends",
+        "venue_name": "Cezanne",
+        "venue_url": "https:\/\/www.facebook.com\/cezannejazz\/",
+        "show_date_start": "2017-07-07 21:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "19",
+        "event_name": "Osama Raad Quartet",
+        "venue_name": "Petit Caf\u00e9",
+        "venue_url": "http:\/\/www.petitcafehouston.com\/",
+        "show_date_start": "2017-07-14 17:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "20",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-07-16 11:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "21",
+        "event_name": "Tap Dance Master Kirstin Grbic",
+        "venue_name": "Ovations",
+        "venue_url": "http:\/\/www.ovationsnightclub.com\/",
+        "show_date_start": "2017-07-22 19:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "22",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-07-26 17:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "23",
+        "event_name": "Trio with David Craig and vocalist Ermelinda Cuellar",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-07-29 19:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "24",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-08-02 17:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "25",
+        "event_name": "Mingus AH UM Tribute Concert",
+        "venue_name": "House Concert",
+        "venue_url": "http:\/\/www.sparrowandthenest.com\/house-concerts\/",
+        "show_date_start": "2017-08-13 18:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "26",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-08-23 17:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "27",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-08-27 11:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "30",
+        "event_name": "Trio with Erin Wright and drummer TBA",
+        "venue_name": "Brasil Cafe",
+        "venue_url": "http:\/\/www.brasilcafehouston.com\/",
+        "show_date_start": "2017-08-16 22:00:00",
+        "show_date_end": "2017-08-16 23:00:00"
+    },
+    {
+        "event_id": "31",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-09-01 17:00:00",
+        "show_date_end": "2017-09-01 21:00:00"
+    },
+    {
+        "event_id": "32",
+        "event_name": "Duo with vocalist Kamil Bonner",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-09-02 21:00:00",
+        "show_date_end": "2017-09-02 23:00:00"
+    },
+    {
+        "event_id": "33",
+        "event_name": "Duo with vocalist Ermelinda Cuellar",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com\/",
+        "show_date_start": "2017-09-23 19:00:00",
+        "show_date_end": "2017-09-23 23:00:00"
+    },
+    {
+        "event_id": "34",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com\/",
+        "show_date_start": "2017-09-17 11:00:00",
+        "show_date_end": "2017-09-17 14:00:00"
+    },
+    {
+        "event_id": "35",
+        "event_name": "Quartet with Steve Allison, Sam Jenkins and Aric Nitzberg",
+        "venue_name": "Eddie V's WEST",
+        "venue_url": null,
+        "show_date_start": "2017-10-11 18:30:00",
+        "show_date_end": "2017-10-11 22:30:00"
+    },
+    {
+        "event_id": "36",
+        "event_name": "Osama Raad Quartet",
+        "venue_name": "Petite Cafe",
+        "venue_url": "http:\/\/www.petitcafehouston.com\/",
+        "show_date_start": "2017-11-17 19:00:00",
+        "show_date_end": "2017-11-17 23:00:00"
+    },
+    {
+        "event_id": "37",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com\/houston-hotel-restaurants\/jazz-con-amore\/",
+        "show_date_start": "2017-11-10 17:00:00",
+        "show_date_end": "2017-11-10 21:00:00"
+    },
+    {
+        "event_id": "38",
+        "event_name": "Duo with vocalist Susan Elliott",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com\/houston-hotel-restaurants\/jazz-con-amore\/",
+        "show_date_start": "2017-11-18 19:00:00",
+        "show_date_end": "2017-11-18 22:00:00"
+    },
+    {
+        "event_id": "39",
+        "event_name": "Steve Allison Quartet",
+        "venue_name": "Eddie V's, Queensbury Lane",
+        "venue_url": null,
+        "show_date_start": "2017-11-20 18:30:00",
+        "show_date_end": "2017-11-20 22:30:00"
+    },
+    {
+        "event_id": "40",
+        "event_name": "Kenny Cordray Tribute Concert",
+        "venue_name": "Fitzgerald's",
+        "venue_url": null,
+        "show_date_start": "2017-12-27 15:00:00",
+        "show_date_end": "2017-12-27 21:00:00"
+    },
+    {
+        "event_id": "41",
+        "event_name": "Jordan Almes Quartet",
+        "venue_name": "Khon\u2019s Cafe",
+        "venue_url": null,
+        "show_date_start": "2017-11-15 20:00:00",
+        "show_date_end": "2017-11-15 23:00:00"
+    },
+    {
+        "event_id": "42",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com\/houston-hotel-restaurants\/jazz-con-amore\/",
+        "show_date_start": "2017-12-01 17:00:00",
+        "show_date_end": "2017-12-01 20:00:00"
+    },
+    {
+        "event_id": "43",
+        "event_name": "Trio with Len Trombetta and Andrew Siefert",
+        "venue_name": "Craftidote (at Antidote Coffee)",
+        "venue_url": "https:\/\/www.facebook.com\/events\/1947789878814664\/",
+        "show_date_start": "2017-12-02 13:00:00",
+        "show_date_end": "2017-12-02 16:00:00"
+    },
+    {
+        "event_id": "45",
+        "event_name": "Steve Allison Quartet",
+        "venue_name": "Eddie V's, Queensbury Lane",
+        "venue_url": null,
+        "show_date_start": "2017-12-04 18:30:00",
+        "show_date_end": "2017-12-04 22:30:00"
+    },
+    {
+        "event_id": "46",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2017-12-17 11:00:00",
+        "show_date_end": "2017-12-17 14:00:00"
+    },
+    {
+        "event_id": "47",
+        "event_name": "Duo with Susan Elliott",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "https:\/\/www.granducahouston.com\/",
+        "show_date_start": "2018-01-13 19:00:00",
+        "show_date_end": "2018-01-13 20:00:00"
+    },
+    {
+        "event_id": "50",
+        "event_name": "Brazosport Big Band featuring Dee Dee Bridgewater",
+        "venue_name": "The Clarion at Brazosport ",
+        "venue_url": "https:\/\/www.brazosport.org\/event\/dee-dee-bridgwater\/",
+        "show_date_start": "2018-01-20 19:00:00",
+        "show_date_end": "2018-01-20 20:00:00"
+    },
+    {
+        "event_id": "51",
+        "event_name": "Woody Witt Quartet",
+        "venue_name": "Cezanne",
+        "venue_url": "facebook.com\/cezannejazz\/",
+        "show_date_start": "2018-02-16 21:00:00",
+        "show_date_end": "2018-02-16 21:00:00"
+    },
+    {
+        "event_id": "52",
+        "event_name": "ReelMusic 2017",
+        "venue_name": "White Oak Music Hall",
+        "venue_url": "http:\/\/www.reelabilitieshouston.org\/reelMusic.php",
+        "show_date_start": "2018-02-22 21:00:00",
+        "show_date_end": "2018-02-22 23:00:00"
+    },
+    {
+        "event_id": "53",
+        "event_name": "Two piano jazz with Art Fristoe, David Craig and Daleton Lee",
+        "venue_name": "Mongoose versus Cobra",
+        "venue_url": "http:\/\/mongooseversuscobra.com\/",
+        "show_date_start": "2018-01-23 19:00:00",
+        "show_date_end": "2018-01-23 22:00:00"
+    },
+    {
+        "event_id": "54",
+        "event_name": "Steve Allison Quartet",
+        "venue_name": "Eddie V's, Queensbury Lane",
+        "venue_url": null,
+        "show_date_start": "2018-01-24 18:30:00",
+        "show_date_end": "2018-01-24 22:30:00"
+    },
+    {
+        "event_id": "55",
+        "event_name": "Brunch duo with Sara Huffman",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "https:\/\/www.granducahouston.com\/en\/bar-malatesta.html",
+        "show_date_start": "2018-03-04 11:30:00",
+        "show_date_end": "2018-03-04 02:30:00"
+    },
+    {
+        "event_id": "56",
+        "event_name": "Steve Allison Quartet",
+        "venue_name": "Eddie V's, Queensbury Lane",
+        "venue_url": null,
+        "show_date_start": "2018-02-08 18:30:00",
+        "show_date_end": "2018-02-08 20:30:00"
+    },
+    {
+        "event_id": "57",
+        "event_name": "Vocalist Raquel Capeda",
+        "venue_name": "Emporio Brazilian Grill",
+        "venue_url": null,
+        "show_date_start": "2018-02-09 19:00:00",
+        "show_date_end": "2018-02-09 21:00:00"
+    },
+    {
+        "event_id": "58",
+        "event_name": "Ernesto Vega Quartet",
+        "venue_name": "Cezanne",
+        "venue_url": "https:\/\/www.facebook.com\/cezannejazz\/",
+        "show_date_start": "2018-03-24 21:00:00",
+        "show_date_end": "2018-03-24 23:50:00"
+    },
+    {
+        "event_id": "59",
+        "event_name": "Duo with vocalist Susan Elliott",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com\/houston-hotel-restaurants\/jazz-con-amore\/",
+        "show_date_start": "2018-02-24 19:00:00",
+        "show_date_end": "2018-02-24 22:00:00"
+    },
+    {
+        "event_id": "60",
+        "event_name": "Duo with vocalist Sam Jenkins",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com\/houston-hotel-restaurants\/jazz-con-amore\/",
+        "show_date_start": "2018-03-03 19:00:00",
+        "show_date_end": "2018-03-03 22:00:00"
+    },
+    {
+        "event_id": "61",
+        "event_name": "Duo with Saxophonist Alisha Pattillo",
+        "venue_name": "The bar in St. Regis Hotel",
+        "venue_url": null,
+        "show_date_start": "2018-03-15 18:00:00",
+        "show_date_end": "2018-03-15 22:00:00"
+    },
+    {
+        "event_id": "62",
+        "event_name": "Quartet with Kelly Dean, Tim Solook and Brennen Nase",
+        "venue_name": "The French Corner",
+        "venue_url": "http:\/\/www.thefrenchcorner.com\/",
+        "show_date_start": "2018-03-23 20:00:00",
+        "show_date_end": "2018-03-23 23:30:00"
+    },
+    {
+        "event_id": "63",
+        "event_name": "Keith Karnaky Quartet with Dean Moore and Erin Wright",
+        "venue_name": "Cezanne",
+        "venue_url": "https:\/\/www.facebook.com\/cezannejazz\/",
+        "show_date_start": "2018-04-28 21:00:00",
+        "show_date_end": "2018-04-28 23:59:00"
+    },
+    {
+        "event_id": "64",
+        "event_name": "Sam Jenkins Quartet",
+        "venue_name": "Eddie V's, City Centre",
+        "venue_url": "https:\/\/www.eddiev.com\/live-music\/tx\/houston-restaurant\/8507",
+        "show_date_start": "2018-04-11 20:30:00",
+        "show_date_end": "2018-04-11 22:30:00"
+    },
+    {
+        "event_id": "66",
+        "event_name": "Harry Sheppard's 90th Birthday Bash with Erin Wright, Bob Chadwick and others",
+        "venue_name": "Brasil Cafe in Montrose",
+        "venue_url": "http:\/\/www.brasilcafehouston.com\/",
+        "show_date_start": "2018-04-02 20:00:00",
+        "show_date_end": "2018-04-02 23:00:00"
+    },
+    {
+        "event_id": "67",
+        "event_name": "Brunch with Kelly Dean",
+        "venue_name": "Hotel Granduca",
+        "venue_url": null,
+        "show_date_start": "2018-04-08 11:30:00",
+        "show_date_end": "2018-04-08 14:30:00"
+    },
+    {
+        "event_id": "68",
+        "event_name": "Danielle Reich Trio with Thomas Helton",
+        "venue_name": "Sambuca",
+        "venue_url": "http:\/\/www.houston.sambucarestaurant.com",
+        "show_date_start": "2018-05-22 18:00:00",
+        "show_date_end": "2018-05-22 22:00:00"
+    },
+    {
+        "event_id": "69",
+        "event_name": "Solo Piano",
+        "venue_name": "Hotel Granduca",
+        "venue_url": "http:\/\/www.granducahouston.com",
+        "show_date_start": "2018-04-27 17:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "70",
+        "event_name": "Shabbat services at SHMA KOLEINU",
+        "venue_name": "SHMA KOLEINU",
+        "venue_url": "http:\/\/www.shmakoleinu.com",
+        "show_date_start": "2018-04-20 18:00:00",
+        "show_date_end": null
+    },
+    {
+        "event_id": "71",
+        "event_name": "Passover services at SHMA KOLEINU",
+        "venue_name": "SHMA KOLEINU",
+        "venue_url": "http:\/\/www.brazosbookstore.com",
+        "show_date_start": "2018-03-30 18:00:00",
+        "show_date_end": null
+    }
+]

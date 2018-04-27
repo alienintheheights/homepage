@@ -15,7 +15,7 @@ class ShowItem extends Component {
         return (
             <div className="show-listing">
                 <h4>{show.event_name}</h4>
-                <h5>{venueLink} <br/><small>{dateIs}</small></h5>
+                <h5>{venueLink} <br /><small>{dateIs}</small></h5>
             </div>
         )
     }

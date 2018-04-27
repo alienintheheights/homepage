@@ -32,12 +32,11 @@ class About extends Component {
                     </div>
                     <div className="row">
                         <div className="col-sm-6 col-sm-offset-3">
-                         {profile ?
-                                (<div className="loader bio" dangerouslySetInnerHTML={profile} />) :
-                                <div className="loader" />}
-                          <img src="/andrew/atcezanne.jpg"  className="responsive mini-circular--portrait " />
-                      
-                           </div>
+                            <div className="bio">
+                                Andrew Lienhard is a pianist and software developer. He lives with his wife <a href="http://sparrowandthenest.com">Stephanie</a> in Houston, Texas.<br /><br />
+                            </div>
+                            <img src="/andrew/atcezanne.jpg" className="responsive mini-circular--portrait " />
+                        </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-12 ">

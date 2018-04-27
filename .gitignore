@@ -9,7 +9,6 @@ public/images/*
 public/img/*
 public/andrew/*
 public/music/*
-public/data/*
 node_modules/*
 util/*
 build.zip
