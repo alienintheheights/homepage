@@ -1,83 +1,89 @@
 body {
-	 background-color: #fff;
+    background-color: #fff;
 }
+
 a,
 a:hover,
 a:focus,
 a:active,
 a.active {
-	color: @primary-link;
+    color: @primary-link;
+}
+
+li {
+    list-style-type: none;
+    padding-bottom: 5px;
 }
 
 hr {
-	border: 1px solid rgb(228, 228, 228);
+    border: 1px solid rgb(228, 228, 228);
 }
 
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
 }
 
 .spacer {
-  padding-right: 5px;
+    padding-right: 5px;
 }
 
-
 .circular--portrait {
-  position: relative;
-  width: 270px;
-  height: 270px;
-  overflow: hidden;
-  border-radius: 50%;
+    position: relative;
+    width: 270px;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 .mini-circular--portrait {
-  position: relative;
-  height: 180px;
-  overflow: hidden;
-  border-radius: 50%;
-  float: left;
-  padding-right: 5px;
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    padding-right: 5px;
 }
 
 .circular--portrait img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .pic--portrait {
-  position: relative;
-  width: 270px;
-  height: 270px;
-  overflow: hidden;
+    position: relative;
+    width: 270px;
+    height: 270px;
+    overflow: hidden;
 }
 
 .about-listing {
-	padding-bottom: 10px;
-  padding-left: 4px;
+    padding-bottom: 10px;
+    padding-left: 4px;
 }
 
 .show-listing {
-  padding-bottom: 10px;
-  padding-left: 4px;
+    padding-bottom: 10px;
+    padding-left: 4px;
 }
 
 .show-listing h4 {
-  margin-bottom: -10px;
+    margin-bottom: -10px;
 }
 
 .show-nonelisted {
-  text-align: center;
-  font-size: 16px;
-  padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
 }
 
-a.show-listing, a.show-listing:visited {
-  color: black;
+a.show-listing,
+a.show-listing:visited {
+    color: black;
 }
 
 .col-centered {
@@ -85,116 +91,114 @@ a.show-listing, a.show-listing:visited {
     margin: 0 auto;
 }
 
-a.successLink, a:visited.successLink {
-  color: @success-link;
+a.successLink,
+a:visited.successLink {
+    color: @success-link;
 }
 
 a:hover.successLink {
-  color: @success-link-hover;
-  text-decoration: none;
+    color: @success-link-hover;
+    text-decoration: none;
 }
 
 .show-toggle {
-  padding: 5px 0;
-  font-size: 13px;
-  border: 1px black solid;
-  background-color: @toggle-bgcolor;
-  text-align: center;
+    padding: 5px 0;
+    font-size: 13px;
+    border: 1px black solid;
+    background-color: @toggle-bgcolor;
+    text-align: center;
 }
 
 .word-def {
-  min-height: 60px;
+    min-height: 60px;
 }
 
 .word-listing h5 {
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: none;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
 }
 
 .word-reveal {
-  color: @word-reveal-color;
-  letter-spacing: 1.0ex;
-  display: inline-block;
-  text-align: center;
-  padding: 15px 0 10px 0;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  text-transform: uppercase;
-  font-size: 1.3em;
-  font-weight: 700;
-  justify-content: space-around;
+    color: @word-reveal-color;
+    letter-spacing: 1.0ex;
+    display: inline-block;
+    text-align: center;
+    padding: 15px 0 10px 0;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 700;
+    justify-content: space-around;
 }
 
 .learnWord {
-  color: @word-reveal-color;
+    color: @word-reveal-color;
 }
 
 .clearList {
-  padding-top: 20px;
-  padding-bottom: 5px;
+    padding-top: 20px;
+    padding-bottom: 5px;
 }
 
 .defClass {
-  text-align: left;
+    text-align: left;
 }
 
 .removeItem {
-  padding-right: 5px;
-  color: @word-reveal-color;
-  font-size: 10px;
+    padding-right: 5px;
+    color: @word-reveal-color;
+    font-size: 10px;
 }
 
 div.review-listing {
-  width: 200px;
+    width: 200px;
 }
 
 h2 {
-	font-size: 20px;
-	text-transform: lowercase;
-	letter-spacing: 2.9px;
-	text-align: left;
+    font-size: 20px;
+    text-transform: lowercase;
+    letter-spacing: 2.9px;
+    text-align: left;
 }
 
 h2.review-listing {
-  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
+    font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 ul.review-listing {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 li.review-listing {
-  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
-  border-bottom: 1px solid #ccc;
+    font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+    border-bottom: 1px solid #ccc;
 }
 
 li.review-listing:last-child {
-  border: none;
+    border: none;
 }
 
 li.review-listing a.review-listing {
-  text-decoration: none;
-  color: #000;
-  display: block;
-  width: 200px;
-
-  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-  transition: font-size 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 200px;
+    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
 }
 
 li.review-listing a.review-listing:hover {
-  font-size: 30px;
-  background: #f6f6f6;
+    font-size: 30px;
+    background: #f6f6f6;
 }
-
-
 
 .gallery-image {
     display: flex;
@@ -209,17 +213,17 @@ li.review-listing a.review-listing:hover {
 }
 
 @media (max-width: 767px) {
-  .gallery-image img {
-    max-height: 300px;
-    max-width: 300px;
-  }
+    .gallery-image img {
+        max-height: 300px;
+        max-width: 300px;
+    }
 }
 
 .image-title {
-  font-size: 1.3em;
-  font-weight: 700;
-  justify-content: space-around;
-  padding-top: 10px;
+    font-size: 1.3em;
+    font-weight: 700;
+    justify-content: space-around;
+    padding-top: 10px;
 }
 
 .image-scroller {
@@ -235,10 +239,10 @@ li.review-listing a.review-listing:hover {
 }
 
 @media (min-width: 767px) {
-  .image-scroller img {
-    width: 60px;
-    height: 60px;
-  }
+    .image-scroller img {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .gcolor {
@@ -246,105 +250,110 @@ li.review-listing a.review-listing:hover {
 }
 
 .musicWrapper {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .musicHeader {
-  padding: 10px 0px 10px;
-  font-size: 16px;
+    padding: 10px 0px 10px;
+    font-size: 16px;
 }
 
 .trackWrapper {
-  padding: 10px 0 0 5px;
-  margin-top: 15px;
-  border: 1px @toggle-bgcolor solid;
+    padding: 10px 0 0 5px;
+    margin-top: 15px;
+    border: 1px @toggle-bgcolor solid;
 }
 
 .track-selector {
-  padding: 5px;
-  font-size: 16px;
-  color:@gray-base;
+    padding: 5px;
+    font-size: 16px;
+    color: @gray-base;
 }
-
 
 .track-selector-active {
-  padding: 5px;
-  font-size: 16px;
-  color:@gray-base;
-  background-color: @success-link-hover
+    padding: 5px;
+    font-size: 16px;
+    color: @gray-base;
+    background-color: @success-link-hover
 }
 
-
 .track-info {
-  font-size: 11px;
+    font-size: 11px;
 }
 
 .trackInfo {
-  font-size: 12px;
-  padding: 5px 0 10px 5px;
+    font-size: 12px;
+    padding: 5px 0 10px 5px;
 }
 
-#word, #about, #shows, #photos, #trackWrapper {
-  margin-top: 15px;
+#word,
+#about,
+#shows,
+#photos,
+#trackWrapper {
+    margin-top: 15px;
 }
 
 .loader:empty,
 .loader:empty:after {
-  border-radius: 50%;
-  width: 10em;
-  height: 10em;
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
 }
+
 .loader:empty {
-  margin: 60px auto;
-  font-size: 10px;
-  position: relative;
-  text-indent: -9999em;
-  border-top: 1.1em solid rgba(254.0, 254.0, 254.0, 0.8);
-  border-right: 1.1em solid rgba(254.0, 254.0, 254.0, 0.8);
-  border-bottom: 1.1em solid rgba(254.0, 254.0, 254.0, 0.8);
-  border-left: 1.1em solid #000000;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation: load8 1.1s infinite linear;
-  animation: load8 1.1s infinite linear;
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border-top: 1.1em solid rgba(254.0, 254.0, 254.0, 0.8);
+    border-right: 1.1em solid rgba(254.0, 254.0, 254.0, 0.8);
+    border-bottom: 1.1em solid rgba(254.0, 254.0, 254.0, 0.8);
+    border-left: 1.1em solid #000000;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear;
 }
+
 @-webkit-keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
+
 @keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 .word-type {
-  margin: 5px;
+    margin: 5px;
 }
 
 .word-total {
-  margin: 5px;
+    margin: 5px;
 }
 
 .pad-the-top {
-	padding-top: 20px;
+    padding-top: 20px;
 }
 
 .pad-the-bottom {
-	padding-bottom: 20px;
+    padding-bottom: 20px;
 }

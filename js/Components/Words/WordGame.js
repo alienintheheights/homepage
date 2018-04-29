@@ -32,7 +32,7 @@ class WordGame extends Component {
             wordList: nextProps.data.words
         })
     }
-    
+
 
     udpateList(item) {
         localStorage.setItem('markedWords', JSON.stringify(item));
@@ -85,7 +85,7 @@ class WordGame extends Component {
     getLastWord(e) {
         if (e) e.preventDefault()
         const { wordIndex, wordList } = this.state
-        const lastIndex = (wordIndex > 0 ) ? (wordIndex - 1) : (wordList.length - 1)
+        const lastIndex = (wordIndex > 0) ? (wordIndex - 1) : (wordList.length - 1)
         this.setState({
             wordIndex: lastIndex
         })
@@ -117,9 +117,7 @@ class WordGame extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">
-                            <h2>Crossword Vocab</h2> <small>I made a little game out of my growing collection of crossword words.
-                                Click the hint link to reveal letters.</small>
-                            <hr className="star-primary" />
+                            <h2>XWord LeX</h2>
                         </div>
                     </div>
                     <div className="row">
@@ -139,24 +137,24 @@ class WordGame extends Component {
                     </div>
                     <div className="row">
                         <div className="col-sm-6 col-sm-offset-3">
-                        <div className="panel-footer">
-                                    <div className="btn-group" role="group" aria-label="XWord Categories">
-                                        <h4>Filter Words By Category</h4>
-                            {
-                                c.WORD_TYPES.map(function (val, inx) {
-                                    const className = (inx === me.state.wordType) ? "btn btn-success" : "btn btn-default"
-                                    const note = (inx === me.state.wordType) ? (<span className="word-total">({me.state.wordList.length} words)</span>) : ''
-                                    return (
-                                        <span key={`word-type-${inx}`} >
-                                            <button className={className} onClick={() => me.filterType(inx)}>
-                                            {val}
-                                            {note}
-                                            </button>
-                                        </span>
-                                    )
-                                })}
-                                 </div>
+                            <div className="panel-footer">
+                                <div className="btn-group" role="group" aria-label="XWord Categories">
+                                    <h4>Filter Words By Category</h4>
+                                    {
+                                        c.WORD_TYPES.map(function (val, inx) {
+                                            const className = (inx === me.state.wordType) ? "btn btn-success" : "btn btn-default"
+                                            const note = (inx === me.state.wordType) ? (<span className="word-total">({me.state.wordList.length} words)</span>) : ''
+                                            return (
+                                                <span key={`word-type-${inx}`} >
+                                                    <button className={className} onClick={() => me.filterType(inx)}>
+                                                        {val}
+                                                        {note}
+                                                    </button>
+                                                </span>
+                                            )
+                                        })}
                                 </div>
+                            </div>
                         </div>
                     </div>
                     <div className="row">
@@ -165,7 +163,7 @@ class WordGame extends Component {
                                 {(hasItems) ? (
                                     <li className="review-listing">
                                         <div className="clearList">
-                                           Your saved words. <a onClick={this.clearList}>clear list</a>
+                                            Saved words <small><a onClick={this.clearList}>clear list</a></small>
                                         </div>
                                     </li>
                                 ) : ""
@@ -203,5 +201,5 @@ function select(state) {
 
 // Wrap the component to inject dispatch and state into it
 export default connect(
-    select, { fetchWords}
+    select, { fetchWords }
 )(WordGame)
