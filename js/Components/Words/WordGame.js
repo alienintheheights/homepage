@@ -117,7 +117,7 @@ class WordGame extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 text-center">
-                            <h2>XWord LeX</h2>
+                            <h2>Crossword Trainer</h2>
                         </div>
                     </div>
                     <div className="row">
@@ -131,28 +131,22 @@ class WordGame extends Component {
                                         <button type="button" className="btn btn-default" onClick={this.getLastWord}>Last Word</button>
                                         <button type="button" className="btn btn-default" onClick={this.getNextWord}>Next Word</button>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-sm-6 col-sm-offset-3">
-                            <div className="panel-footer">
-                                <div className="btn-group" role="group" aria-label="XWord Categories">
-                                    <h4>Filter Words By Category</h4>
-                                    {
-                                        c.WORD_TYPES.map(function (val, inx) {
-                                            const className = (inx === me.state.wordType) ? "btn btn-success" : "btn btn-default"
-                                            const note = (inx === me.state.wordType) ? (<span className="word-total">({me.state.wordList.length} words)</span>) : ''
-                                            return (
-                                                <span key={`word-type-${inx}`} >
-                                                    <button className={className} onClick={() => me.filterType(inx)}>
-                                                        {val}
-                                                        {note}
-                                                    </button>
-                                                </span>
-                                            )
-                                        })}
+                                    <div className="btn-group top-padding" role="group" aria-label="XWord Categories">
+                                        <h4>Filters</h4>
+                                        {
+                                            c.WORD_TYPES.map(function (val, inx) {
+                                                const className = (inx === me.state.wordType) ? "btn btn-success" : "btn btn-default"
+                                                const note = (inx === me.state.wordType) ? (<span className="word-total">({me.state.wordList.length} words)</span>) : ''
+                                                return (
+                                                    <span key={`word-type-${inx}`} >
+                                                        <button className={className} onClick={() => me.filterType(inx)}>
+                                                            {val}
+                                                            {note}
+                                                        </button>
+                                                    </span>
+                                                )
+                                            })}
+                                    </div>
                                 </div>
                             </div>
                         </div>
