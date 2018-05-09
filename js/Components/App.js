@@ -14,14 +14,14 @@ const App = () => (
 )
 
 App.propTypes = {
-    data: PropTypes.object,
-    children: PropTypes.object,
-    dispatch: PropTypes.func
+    data     : PropTypes.object,
+    children : PropTypes.object,
+    dispatch : PropTypes.func
 }
 
 function select(state) {
     return {
-        data: state
+        data : state
     }
 }
 

@@ -1,19 +1,10 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import { fetchProfile } from '../actions'
-
 class About extends Component {
-
-    componentDidMount() {
-        if (!this.props.data || !this.props.data.profile) {
-            this.props.fetchProfile()
-        }
-    }
-
+    
     shouldComponentUpdate(nextProps, nextState) {
-        return true
+        return false
     }
 
     handleClick(linkText) {
@@ -21,7 +12,6 @@ class About extends Component {
     }
 
     render() {
-        const { profile } = this.props.data
         return (
             <section className="success" id="about">
                 <div className="container">
@@ -45,7 +35,6 @@ class About extends Component {
 
 
                         <ul className="col-sm-6 col-sm-offset-3 ">
-
                             <li>
                                 <a href="https://www.linkedin.com/in/andrewlienhard/" onClick={this.handleClick.bind(this, 'https://www.linkedin.com/in/andrewlienhard/')} className="btn-social btn-outline">https://www.linkedin.com/in/andrewlienhard</a>
                             </li>
@@ -62,19 +51,4 @@ class About extends Component {
 }
 
 
-About.propTypes = {
-    data : PropTypes.object
-}
-
-
-function select(state) {
-    return {
-        data : state
-    }
-}
-
-
-// Wrap the component to inject dispatch and state into it
-export default connect(
-    select, { fetchProfile }
-)(About)
+export default About
