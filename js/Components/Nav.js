@@ -18,29 +18,29 @@ class Nav extends Component {
 
         // jQuery for page scrolling feature - requires jQuery Easing plugin
         // handles both hash and page links
-        $('.page-scroll a').bind('click', function (event) {
+        $('.page-scroll a').bind('click', (event) => {
             // scenario one: the anchor exists in the page
-             $('html, body').stop().animate({
-                 scrollTop: 0
-                }, 1250, 'easeInOutExpo');
-               // event.preventDefault();
-        });
+            $('html, body').stop().animate({
+                scrollTop : 0
+            }, 1250, 'easeInOutExpo')
+            // event.preventDefault()
+        })
 
         // Highlight the top nav as scrolling occurs
         $('body').scrollspy({
-            target: '.navbar-fixed-top',
-            offset: 51
-        });
+            target : '.navbar-fixed-top',
+            offset : 51
+        })
 
         // Closes the Responsive Menu on Menu Item Click
-        $('.navbar-collapse ul li a').click(function () {
-            $('.navbar-toggle:visible').click();
-        });
+        $('.navbar-collapse ul li a').click(() => {
+            $('.navbar-toggle:visible').click()
+        })
 
         // Offset for Main Navigation
         $('#mainNav').affix({
-            offset: {
-                top: 100
+            offset : {
+                top : 100
             }
         })
 
@@ -75,9 +75,9 @@ class Nav extends Component {
                     </div>
                 </div>
             </nav>
-        );
+        )
     }
 }
 
 
-export default Nav;
+export default Nav

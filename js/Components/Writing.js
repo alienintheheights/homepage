@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Writing extends Component {
 
     handleClick(linkText) {
-        window.trackOutboundLink(linkText);
+        window.trackOutboundLink(linkText)
     }
 
     render() {

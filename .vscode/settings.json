@@ -1,0 +1,22 @@
+{
+    "editor.formatOnSave": false,
+    // Set the default
+    "beautify.onSave": false,
+    "beautify.JSFiles": [
+        "js",
+        "json"
+    ],
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        {
+            "language": "html",
+            "autoFix": true
+        }
+    ],
+    "eslint.workingDirectories": [
+        "js"
+    ],
+    "eslint.run": "onSave",
+    "eslint.autoFixOnSave": true
+}

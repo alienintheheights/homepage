@@ -8,91 +8,91 @@ import { loadImages, selectImage } from '../../actions'
 import { IMAGES_PER_PAGE } from '../../constants'
 
 class Gallery extends Component {
-  constructor(props) {
-    super(props)
-    this.nextBatch = this.nextBatch.bind(this)
-    this.prevBatch = this.prevBatch.bind(this)
-    this.state = {
-      pageNumber: 1
+    constructor(props) {
+        super(props)
+        this.nextBatch = this.nextBatch.bind(this)
+        this.prevBatch = this.prevBatch.bind(this)
+        this.state = {
+            pageNumber : 1
+        }
     }
-  }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return (this.props.data.selectedImage !== nextProps.data.selectedImage)
-  }
+    shouldComponentUpdate(nextProps, nextState) {
+        return (this.props.data.selectedImage !== nextProps.data.selectedImage)
+    }
 
-  componentDidMount() {
-    this.props.loadImages({
-      page: this.state.pageNumber,
-      size: IMAGES_PER_PAGE
-    })
-  }
+    componentDidMount() {
+        this.props.loadImages({
+            page : this.state.pageNumber,
+            size : IMAGES_PER_PAGE
+        })
+    }
 
-  nextBatch(e) {
-    if (e) e.preventDefault()
-    const { pageNumber } = this.state
-    this.props.loadImages({
-      page: pageNumber + 1,
-      size: IMAGES_PER_PAGE
-    })
-    this.setState({
-      pageNumber: pageNumber + 1
-    })
-  }
+    nextBatch(e) {
+        if (e) e.preventDefault()
+        const { pageNumber } = this.state
+        this.props.loadImages({
+            page : pageNumber + 1,
+            size : IMAGES_PER_PAGE
+        })
+        this.setState({
+            pageNumber : pageNumber + 1
+        })
+    }
 
-  prevBatch(e) {
-    if (e) e.preventDefault()
-    const { pageNumber } = this.state
-    if (pageNumber === 1) return
+    prevBatch(e) {
+        if (e) e.preventDefault()
+        const { pageNumber } = this.state
+        if (pageNumber === 1) return
 
-    this.props.loadImages({
-      page: pageNumber - 1,
-      size: IMAGES_PER_PAGE
-    })
-    this.setState({
-      pageNumber: pageNumber - 1
-    })
-  }
+        this.props.loadImages({
+            page : pageNumber - 1,
+            size : IMAGES_PER_PAGE
+        })
+        this.setState({
+            pageNumber : pageNumber - 1
+        })
+    }
 
-  render() {
-    const { images, selectedImage } = this.props.data
-    const { selectImage } = this.props
-    const { pageNumber } = this.state
+    render() {
+        const { images, selectedImage } = this.props.data
+        const { selectImage } = this.props
+        const { pageNumber } = this.state
 
-    return (
-      <section className="success" id="photos">
-        <div className="container page-scroll">
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <h2>Flickr Photos</h2>
-              Photos taken by Andrew and Steph via our <a href="https://www.flickr.com/photos/lienhard/" className="successLink">Flickr stream</a>.<br/>
-              Canon 5D Mark ii and Rebel XTi, various iPhones. One day we'll own a Leica. 
-          
-              <hr className="star-primary" />
+        return (
+            <section className="success" id="photos">
+                <div className="container page-scroll">
+                <div className="row">
+                    <div className="col-lg-12 text-center">
+                    <h2>Flickr Photos</h2>
+                    Photos taken by Andrew and Steph via our <a href="https://www.flickr.com/photos/lienhard/" className="successLink">Flickr stream</a>.<br/>
+                    Canon 5D Mark ii and Rebel XTi, various iPhones. One day we'll own a Leica. 
+                
+                    <hr className="star-primary" />
+                        </div>
                 </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <ImageGallery imageArray={images} selectImage={selectImage} pageNumber={pageNumber} nextButton={this.nextBatch} prevButton={this.prevBatch} />
-              <FeatureImage image={selectedImage} />
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
+                <div className="row">
+                    <div className="col-lg-12 text-center">
+                    <ImageGallery imageArray={images} selectImage={selectImage} pageNumber={pageNumber} nextButton={this.nextBatch} prevButton={this.prevBatch} />
+                    <FeatureImage image={selectedImage} />
+                    </div>
+                </div>
+                </div>
+            </section>
+        )
+    }
 
 }
 
 Gallery.propTypes = {
-  data: PropTypes.object
+    data : PropTypes.object
 }
 
 
 function select(state) {
-  return {
-    data: state
-  }
+    return {
+        data : state
+    }
 }
 
 

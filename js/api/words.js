@@ -1,19 +1,19 @@
 import 'whatwg-fetch'
-
-const nodeEnv = process.env.NODE_ENV;
-const fullURL = (nodeEnv === "production") ? "/api/words" : "http://localhost/api/words";
+const fullURL = '/data/vocabdb.json'
+import { shuffle } from '../util'
 
 export const requestWords = (payload) => {
     const returnState = Object.assign({}, payload) // copy
     // builds using promises
     return fetch(fullURL)
-        .then(function (response) {
+        .then((response) => {
             return response.json()
-        }).then(function (response) {
+        }).then((response) => {
+            shuffle(response)
             return response
-        }).catch(function (error) {
-            console.log("Request error: " + error);
+        }).catch((error) => {
+            console.log('Request error: ' + error)
             returnState.error = error.toString()
             return returnState
-        });
+        })
 }

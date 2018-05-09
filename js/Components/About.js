@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -13,11 +13,11 @@ class About extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        return true;
+        return true
     }
 
     handleClick(linkText) {
-        window.trackOutboundLink(linkText);
+        window.trackOutboundLink(linkText)
     }
 
     render() {
@@ -32,11 +32,10 @@ class About extends Component {
                     </div>
                     <div className="row">
                         <div className="col-sm-6 col-sm-offset-3">
-                            {profile ?
-                                (<div className="loader bio" dangerouslySetInnerHTML={profile} />) :
-                                <div className="loader" />}
+                            <div className="bio">
+                                Andrew Lienhard is a pianist and software developer. He lives with his wife <a href="http://sparrowandthenest.com">Stephanie</a> in Houston, Texas.<br /><br />
+                            </div>
                             <img src="/andrew/atcezanne.jpg" className="responsive mini-circular--portrait " />
-
                         </div>
                     </div>
                     <div className="row">
@@ -58,19 +57,19 @@ class About extends Component {
                     </div>
                 </div>
             </section>
-        );
+        )
     }
 }
 
 
 About.propTypes = {
-    data: PropTypes.object
+    data : PropTypes.object
 }
 
 
 function select(state) {
     return {
-        data: state
+        data : state
     }
 }
 

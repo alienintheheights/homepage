@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 class ImageGallery extends Component {
-  render() {
-    const { imageArray, selectImage, prevButton, nextButton } = this.props
+    render() {
+        const { imageArray, selectImage, prevButton, nextButton } = this.props
 
-    return (
+        return (
       <div className="image-scroller">
        <div className="row">
           <div className="col-sm-12">
@@ -19,8 +19,8 @@ class ImageGallery extends Component {
 
         </div>
       </div>
-    )
-  }
+        )
+    }
 }
 
 export default ImageGallery

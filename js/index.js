@@ -13,13 +13,14 @@ import App from './Components/App'
 import Home from './Components/Home'
 import Tracks from './Components/Music/Tracks'
 
+
 // these are parsed by webpack
-require('./css/less/main.less');
+require('./css/less/main.less')
 
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware()
 // mount it on the Store w/ redux dev tools
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
   appState,
   composeEnhancers(applyMiddleware(sagaMiddleware))
@@ -29,15 +30,15 @@ sagaMiddleware.run(mySaga)
 
 // Navigation, Routes, and Auth rules
 class DrewHome extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <HashRouter>
-          <App/>
-        </HashRouter>
-      </Provider>
-    )
-  }
+    render() {
+        return (
+          <Provider store={store}>
+            <HashRouter>
+              <App/>
+            </HashRouter>
+          </Provider>
+        )
+    }
 }
 
 ReactDOM.render(
@@ -47,16 +48,16 @@ ReactDOM.render(
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./Components/App', () => {
-    const NextApp = require('./Components/App').default;
-    ReactDOM.render(
-      <AppContainer>
-        <Provider store={store}>
-          <NextApp />
-        </Provider>,
-      </AppContainer>,
-      document.getElementById('root')
-    );
-  });
+    module.hot.accept('./Components/App', () => {
+        const NextApp = require('./Components/App').default
+        ReactDOM.render(
+          <AppContainer>
+            <Provider store={store}>
+              <NextApp />
+            </Provider>,
+          </AppContainer>,
+          document.getElementById('root')
+        )
+    })
 }
 

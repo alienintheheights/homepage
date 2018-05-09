@@ -45,17 +45,17 @@ export const WORDS_FETCH_FAILED = 'WORDS_FETCH_FAILED'
  *
  */
 export const WORD_TYPES = [
-   "All",
-   "General",
-   "Brands",
-   "Geography",
-   "Religion/Mythology",
-   "Foreign",
-   "Notable People",
-   "Science",
-   "Indigenous",
-   "Historical",
-   "Music",
-   "Nature",
-   "Literature/Film"
+    'All',
+    'General',
+    'Brands',
+    'Geography',
+    'Religion/Mythology',
+    'Foreign',
+    'Notable People',
+    'Science',
+    'Indigenous',
+    'Historical',
+    'Music',
+    'Nature',
+    'Literature/Film'
 ]

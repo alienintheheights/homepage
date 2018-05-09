@@ -7,22 +7,22 @@ import Main from './Main'
 import Footer from './Footer'
 
 const App = () => (
-      <div>
-        <Main/>
-        <Footer />
-      </div>
+  <div>
+    <Main />
+    <Footer />
+  </div>
 )
 
 App.propTypes = {
-  data: PropTypes.object,
-  children: PropTypes.object,
-  dispatch: PropTypes.func
+    data: PropTypes.object,
+    children: PropTypes.object,
+    dispatch: PropTypes.func
 }
 
 function select(state) {
-  return {
-    data: state
-  }
+    return {
+        data: state
+    }
 }
 
 import { withRouter } from 'react-router-dom'

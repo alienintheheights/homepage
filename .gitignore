@@ -19,3 +19,7 @@ dist/*
 temp/*
 attic/*
 yarn-log.error
+cypress/screenshots/*
+cypress/videos/*
+coverage/*
+

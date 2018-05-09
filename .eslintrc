@@ -1,0 +1,41 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "ecmaVersion": 8,
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
+  "rules": {
+    "key-spacing": [2, {
+      "singleLine": {
+          "beforeColon": false,
+          "afterColon": true
+      },
+      "multiLine": {
+          "beforeColon": true,
+          "afterColon": true,
+          "align": "colon"
+      }
+    }],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "consistent-return": 2,
+    "indent": [
+      1,
+      4
+    ],
+    "semi": [2, "never"],
+    "space-unary-ops": 2,
+    "prefer-arrow-callback": [
+      1,
+      {
+        "allowNamedFunctions": true
+      }
+    ]
+  }
+}

@@ -10,27 +10,27 @@ import WordGame from './Words/WordGame'
 
 class Home extends Component {
 
-  render() {
-    return (
-      <div>
-        <About dispatch={this.props.dispatch} />
-        <Shows dispatch={this.props.dispatch} />
-        <WordGame dispatch={this.props.dispatch} />
-      </div>
-    )
-  }
+    render() {
+        return (
+          <div>
+            <About dispatch={this.props.dispatch} />
+            <Shows dispatch={this.props.dispatch} />
+            <WordGame dispatch={this.props.dispatch} />
+          </div>
+        )
+    }
 }
 
 Home.propTypes = {
-  data: PropTypes.object,
-  children: PropTypes.object,
-  dispatch: PropTypes.func
+    data: PropTypes.object,
+    children: PropTypes.object,
+    dispatch: PropTypes.func
 }
 
 function select(state) {
-  return {
-    data: state
-  }
+    return {
+        data: state
+    }
 }
 
 import { withRouter } from 'react-router-dom'

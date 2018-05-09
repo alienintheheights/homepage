@@ -9,16 +9,16 @@ import WordItem from './WordItem'
 
 class WordGame extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.getNextWord = this.getNextWord.bind(this)
         this.getLastWord = this.getLastWord.bind(this)
         this.clearList = this.clearList.bind(this)
         this.filterType = this.filterType.bind(this)
         this.state = {
-            marked: JSON.parse(localStorage.getItem('markedWords')) || [],
-            wordList: [],
-            wordIndex: 0,
-            wordType: 0
+            marked    : JSON.parse(localStorage.getItem('markedWords')) || [],
+            wordList  : [],
+            wordIndex : 0,
+            wordType  : 0
         }
     }
 
@@ -27,17 +27,17 @@ class WordGame extends Component {
         this.props.fetchWords()
     }
 
-    componentWillReceiveProps = (nextProps) => {
+    componentWillReceiveProps(nextProps) {
         this.setState({
-            wordList: nextProps.data.words
+            wordList : nextProps.data.words
         })
     }
 
 
     udpateList(item) {
-        localStorage.setItem('markedWords', JSON.stringify(item));
+        localStorage.setItem('markedWords', JSON.stringify(item))
         this.setState({
-            marked: item || []
+            marked : item || []
         })
     }
 
@@ -55,9 +55,9 @@ class WordGame extends Component {
 
     removeItem(selectedWord) {
         const { marked, wordIndex, wordList } = this.state
-        let newMark = marked.filter(function (candidate) {
-            return candidate.word !== selectedWord;
-        });
+        let newMark = marked.filter((candidate) => {
+            return candidate.word !== selectedWord
+        })
         this.udpateList(newMark)
     }
 
@@ -77,7 +77,7 @@ class WordGame extends Component {
         const { wordIndex, wordList } = this.state
         const nextIndex = (wordIndex < wordList.length - 1) ? wordIndex + 1 : 0
         this.setState({
-            wordIndex: nextIndex
+            wordIndex : nextIndex
         })
         return this.state.wordList[nextIndex]
     }
@@ -87,7 +87,7 @@ class WordGame extends Component {
         const { wordIndex, wordList } = this.state
         const lastIndex = (wordIndex > 0) ? (wordIndex - 1) : (wordList.length - 1)
         this.setState({
-            wordIndex: lastIndex
+            wordIndex : lastIndex
         })
         return this.state.wordList[lastIndex]
     }
@@ -95,14 +95,12 @@ class WordGame extends Component {
     filterType(typeId) {
         const { words } = this.props.data
         const filterList = (typeId === -1) ? words : words.filter((val, inx) => {
-            if (typeId === 0 || (val.type * 1 === typeId)) {
-                return val
-            }
+            return (typeId === 0 || (val.type * 1 === typeId))
         })
         this.setState({
-            wordList: filterList,
-            wordIndex: 0,
-            wordType: typeId
+            wordList  : filterList,
+            wordIndex : 0,
+            wordType  : typeId
         })
     }
 
@@ -113,82 +111,85 @@ class WordGame extends Component {
         const markHandler = this.markWord.bind(this)
         var me = this
         return (
-            <section className="" id="word">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12 text-center">
-                            <h2>Crossword Trainer</h2>
+            <section className='' id='word'>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-lg-12 text-center'>
+                            <h2>xWordGame</h2>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-sm-6 col-sm-offset-3 text-center">
-                            <div className="panel panel-default">
-                                <div className="panel-body game-panel">
-                                    {(wod && wod.definition) ? (<WordItem isMarked={me.hasWord(wod.word)} markHandler={markHandler} selectedWord={wod} {...me.props} />) : (<div className="loader" />)}
-                                </div>
-                                <div className="panel-footer">
-                                    <div className="btn-group" role="group" aria-label="XWord Controls">
-                                        <button type="button" className="btn btn-default" onClick={this.getLastWord}>Last Word</button>
-                                        <button type="button" className="btn btn-default" onClick={this.getNextWord}>Next Word</button>
+                    <div className='row'>
+                        <div className='col-sm-6 col-sm-offset-3 text-center'>
+                            <div className='panel panel-default'>
+                                <div className='panel-body game-panel'>
+                                    {(wod && wod.definition) ? (<WordItem isMarked={me.hasWord(wod.word)} markHandler={markHandler} selectedWord={wod} {...me.props} />) : (<div className='loader' />)}
+                                    <div className='btn-group' role='group' aria-label='XWord Controls'>
+                                        <button type='button' className='btn btn-default' onClick={this.getLastWord}>Last Word</button>
+                                        <button type='button' className='btn btn-default' onClick={this.getNextWord}>Next Word</button>
                                     </div>
-                                    <div className="btn-group top-padding" role="group" aria-label="XWord Categories">
+                                </div>
+                                <div className='panel-footer'>
+
+                                    <div className='btn-group top-padding' role='group' aria-label='XWord Categories'>
                                         <h4>Filters</h4>
-                                        {
-                                            c.WORD_TYPES.map(function (val, inx) {
-                                                const className = (inx === me.state.wordType) ? "btn btn-success" : "btn btn-default"
-                                                const note = (inx === me.state.wordType) ? (<span className="word-total">({me.state.wordList.length} words)</span>) : ''
-                                                return (
-                                                    <span key={`word-type-${inx}`} >
-                                                        <button className={className} onClick={() => me.filterType(inx)}>
-                                                            {val}
-                                                            {note}
-                                                        </button>
-                                                    </span>
-                                                )
-                                            })}
+                                        <div className='left-align'>
+                                            {
+                                                c.WORD_TYPES.map((val, inx) => {
+                                                    const className = (inx === me.state.wordType) ? 'btn btn-success' : 'btn btn-default'
+                                                    const note = (inx === me.state.wordType) ? (<span className='word-total'>({me.state.wordList.length} words)</span>) : ''
+                                                    return (
+                                                        <span key={`word-type-${inx}`} >
+                                                            <button className={className} onClick={() => me.filterType(inx)}>
+                                                                {val}
+                                                                {note}
+                                                            </button>
+                                                        </span>
+                                                    )
+                                                })}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-sm-6 col-sm-offset-3">
-                            <ul className="review-listing">
+                    <div className='row'>
+                        <div className='col-sm-6 col-sm-offset-3'>
+                            <ul className='review-listing'>
                                 {(hasItems) ? (
-                                    <li className="review-listing">
-                                        <div className="clearList">
+                                    <li className='review-listing'>
+                                        <div className='clearList'>
                                             Saved words <small><a onClick={this.clearList}>clear list</a></small>
                                         </div>
                                     </li>
-                                ) : ""
+                                ) : ''
                                 }
-                                {(hasItems) ? marked.map(function (value, index) {
+                                {(hasItems) ? marked.map((value, index) => {
                                     return (
-                                        <li key={`saved-words-parent-${index}`} className="review-listing">
-                                            <div key={`saved-words-${index}`} className="markedWord">
-                                                <span className="removeItem glyphicon glyphicon-remove" aria-hidden="true" onClick={me.removeItem.bind(me, value.word)} />
+                                        <li key={`saved-words-parent-${index}`} className='review-listing'>
+                                            <div key={`saved-words-${index}`} className='markedWord'>
+                                                <span className='removeItem glyphicon glyphicon-remove' aria-hidden='true' onClick={me.removeItem.bind(me, value.word)} />
                                                 <b>{value.word}</b> -- {value.definition}
                                             </div>
-                                        </li>);
+                                        </li>)
                                 }
-                                ) : ""}
+                                ) : ''}
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
-        );
+        )
     }
 }
 
 WordGame.propTypes = {
-    data: PropTypes.object
+    data : PropTypes.object
 }
 
 
 function select(state) {
     return {
-        data: state
+        data : state
     }
 }
 

@@ -13,15 +13,15 @@ class TrackItem extends Component {
 
     componentWillUnmount() {
         // This code can only be able to execute when the audio component is already mounted
-        ReactDOM.findDOMNode(this.audioComponent).dispatchEvent(new Event('audio-pause'));
-       
+        ReactDOM.findDOMNode(this.audioComponent).dispatchEvent(new Event('audio-pause'))
+
     }
 
     render() {
-        const { track, registerAudioPlayer, autoPlay} = this.props
+        const { track, registerAudioPlayer, autoPlay } = this.props
         const playlist = [{
-            name: track.name,
-            src: track.src
+            name : track.name,
+            src  : track.src
         }]
         const me = this
         return (
@@ -32,11 +32,11 @@ class TrackItem extends Component {
                     autoPlay={autoPlay}
                     playlist={playlist}
                     ref={audioComponent => {
-                        this.audioComponent = audioComponent;
+                        this.audioComponent = audioComponent
                     }}
                 />
             </div>
-        );
+        )
     }
 
 }
